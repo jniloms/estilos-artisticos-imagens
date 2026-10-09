@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Converte as imagens de originais/ para WebP (qualidade 95, no máximo 1080 px por lado, mantendo a proporção) em img/ e atualiza
-os links de imagem de estilos-artisticos-geracao-imagens.html para as versões WebP.
+os links de imagem de index.html para as versões WebP.
 
 Só reconverte arquivos novos ou alterados (compara datas de modificação).
 Requer Pillow com suporte a WebP (pip install pillow).
@@ -26,7 +26,7 @@ ORIG = os.path.join(PASTA, "originais")
 IMG = os.path.join(PASTA, "img")
 QUALIDADE = 95
 LADO_MAX = 1080
-ARQ = os.path.join(PASTA, "estilos-artisticos-geracao-imagens.html")
+ARQ = os.path.join(PASTA, "index.html")
 PREFIXO = {"geral": "geral", "mulher": "mulhercomflores"}
 MODELOS = ("gpt", "gemini")
 EXTS = ("jpeg", "jpg", "png", "webp")

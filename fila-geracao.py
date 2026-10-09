@@ -12,7 +12,7 @@ O id é "<grupo>-<Estilo>-<modelo>" (mesmo padrão do nome do arquivo, sem exten
 import json, os, re, sys
 
 PASTA = os.path.dirname(os.path.abspath(__file__))
-HTML = os.path.join(PASTA, "estilos-artisticos-geracao-imagens.html")
+HTML = os.path.join(PASTA, "index.html")
 ORIG = os.path.join(PASTA, "originais")
 FILA = os.path.join(PASTA, "fila-geracao.json")
 PREFIXO = {"geral": "geral", "mulher": "mulhercomflores"}

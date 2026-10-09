@@ -11,7 +11,7 @@ Guia com 100 estilos artísticos populares em prompts de IA generativa (Midjourn
 
 | Arquivo / pasta | Descrição |
 | :--- | :--- |
-| `estilos-artisticos-geracao-imagens.html` | Versão em HTML com as imagens de exemplo incorporadas às tabelas. |
+| `index.html` | Versão em HTML com as imagens de exemplo incorporadas às tabelas. |
 | `atualizar-imagens.py` | Script que atualiza as colunas de imagem do HTML a partir da pasta `img/`. |
 | `originais/` | Imagens no tamanho e formato originais fornecidos pelos modelos (Gemini e GPT). |
 | `img/` | Versões WebP (qualidade 95) geradas pelo script a partir de `originais/`; são as usadas na página. |

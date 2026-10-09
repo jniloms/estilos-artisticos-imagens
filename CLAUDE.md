@@ -1,6 +1,6 @@
 # Estilos artísticos – geração de imagens
 
-Página HTML (`estilos-artisticos-geracao-imagens.html`) com 100 estilos artísticos, cada um com 4 imagens: `geral` e `mulhercomflores` × `gpt` e `gemini`. Os dados ficam na variável `ESTILOS` entre `/*ESTILOS:inicio*/` e `/*ESTILOS:fim*/` (não altere os marcadores).
+Página HTML (`index.html`) com 100 estilos artísticos, cada um com 4 imagens: `geral` e `mulhercomflores` × `gpt` e `gemini`. Os dados ficam na variável `ESTILOS` entre `/*ESTILOS:inicio*/` e `/*ESTILOS:fim*/` (não altere os marcadores).
 
 ## Pastas e scripts
 - `originais/`: imagens no formato/tamanho originais (Gemini = `.jpeg`, GPT = `.png`). Nome: `<geral|mulhercomflores>-<Estilo>-<gpt|gemini>.<ext>`, onde `<Estilo>` é o primeiro item de `stems` do estilo (sem acento, ex.: `Geometria Islamica`).
