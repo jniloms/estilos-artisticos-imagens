@@ -42,4 +42,4 @@ Fluxo usado com a extensão Claude in Chrome (precisa de `claude --chrome`; Chro
 - `geral-Disney Classico-gpt`, `geral-Quadrinhos Americanos-gpt` e `mulhercomflores-Disney Classico-gpt` foram gerados com o prompt reescrito como "original/generic".
 - `~/Downloads` tem um `Vigilante Sob a Chuva Neon.png` sobrando (download duplicado do Quadrinhos geral).
 - Gemini: `mulhercomflores-Fotografia Aerea` saiu como díptico (retrato + vista aérea) e `mulhercomflores-Escultura em Marmore` como mulher ao lado de uma estátua (não busto); considere regerar com prompt mais claro.
-- Os 5 estilos com fenótipo alterado (Ukiyo-e, Arte Egípcia, Arte Maia, Arte Aborígene, Pintura Chinesa) precisam ter a imagem `mulhercomflores` regerada (gpt e gemini).
+- As 10 imagens `mulhercomflores` dos 5 estilos com fenótipo alterado (Ukiyo-e, Arte Egípcia, Arte Maia, Arte Aborígene, Pintura Chinesa) foram regeradas com os prompts novos; as antigas estão em `old/` (originais e webp), fora dos scripts. No Gemini, `mulhercomflores-Shan Shui` saiu como tríptico em estilo de rolo (mulher no painel central); aceito, mas pode ser regerado.
