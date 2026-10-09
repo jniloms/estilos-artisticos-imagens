@@ -980,7 +980,7 @@
   "prompt": "Elegant portrait of a young Black woman with curly hair in a puff holding a vase with lilac, red, and yellow flowers, stylized 3D animated feature film look, big expressive eyes, soft subsurface scattering skin, rounded friendly proportions, warm cinematic lighting, saturated cheerful colors"
  },
  "geral-Disney Classico-gpt": {
-  "status": "erro",
+  "status": "feito",
   "estilo": "Disney Clássico (2D)",
   "modelo": "gpt",
   "arquivo": "geral-Disney Classico-gpt.png",
@@ -1946,7 +1946,7 @@
   "prompt": "Vintage lithograph propaganda poster, a heroic worker pointing toward a rising sun seen from a low angle, bold diagonal composition, limited flat palette of red, black and cream, huge condensed sans-serif slogan, slightly misregistered ink and aged paper folds"
  },
  "mulhercomflores-Cartaz Vintage-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartaz Vintage / Propaganda",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Cartaz Vintage-gpt.png",
@@ -2184,7 +2184,7 @@
   "prompt": "Elegant glitch art portrait of a young blonde woman holding a jar of lilac, red, and yellow flowers, artistic digital displacement lines, corrupted data aesthetics, sophisticated color channel separation"
  },
  "geral-Fotorrealismo-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotorrealismo / Hiperrealismo",
   "modelo": "gpt",
   "arquivo": "geral-Fotorrealismo-gpt.png",
@@ -2198,7 +2198,7 @@
   "prompt": "Hyperrealistic close-up portrait of an elderly fisherman with weathered skin, every pore, wrinkle and eyelash rendered in microscopic detail, glassy wet reflections in the eyes, razor-sharp focus with soft background blur, natural window light, indistinguishable from a photograph, 8k"
  },
  "mulhercomflores-Fotorrealismo-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotorrealismo / Hiperrealismo",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Fotorrealismo-gpt.png",
@@ -2212,7 +2212,7 @@
   "prompt": "Elegant portrait of a young Black woman holding a vase with lilac, red, and yellow flowers, photorealistic hyperrealism portrait, visible skin pores and fine hairs, glossy wet reflections on the glass vase, shot on 85mm lens, razor-sharp focus, natural window light, 8k detail"
  },
  "geral-Retrato de Estudio-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Retrato de Estúdio",
   "modelo": "gpt",
   "arquivo": "geral-Retrato de Estudio-gpt.png",
@@ -2226,7 +2226,7 @@
   "prompt": "Classic black-and-white studio portrait of a weathered jazz musician against a seamless grey backdrop, Rembrandt lighting with a triangle of light on the cheek, deep sculpted shadows, direct intense gaze, 85mm lens, fine film grain, timeless and dignified"
  },
  "mulhercomflores-Retrato de Estudio-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Retrato de Estúdio",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Retrato de Estudio-gpt.png",
@@ -2240,7 +2240,7 @@
   "prompt": "Elegant portrait of a young South Asian woman with dark hair holding a vase with lilac, red, and yellow flowers, classic studio portrait photograph, Rembrandt lighting with triangle of light on the cheek, seamless grey backdrop, soft beauty dish, 85mm lens, direct gaze, refined retouching"
  },
  "geral-Fotografia de Produto-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Produto",
   "modelo": "gpt",
   "arquivo": "geral-Fotografia de Produto-gpt.png",
@@ -2254,7 +2254,7 @@
   "prompt": "High-end commercial product photograph of a crystal perfume bottle on a mirrored acrylic surface, soft large softbox lighting with crisp rim highlights, clean seamless pastel backdrop, perfect reflections, macro sharpness edge to edge, subtle floral props, luxury advertising look"
  },
  "mulhercomflores-Fotografia de Produto-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Produto",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Fotografia de Produto-gpt.png",
@@ -2268,7 +2268,7 @@
   "prompt": "Elegant portrait of a young woman with brown skin holding a vase with lilac, red, and yellow flowers, commercial product-style photograph, elegant hands of a young woman with brown skin presenting a glass vase of lilac, red and yellow flowers, seamless pastel backdrop, soft softbox lighting, crisp reflections, macro sharpness"
  },
  "geral-Golden Hour-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Golden Hour",
   "modelo": "gpt",
   "arquivo": "geral-Golden Hour-gpt.png",
@@ -2282,7 +2282,7 @@
   "prompt": "Wheat field at golden hour, low sun flaring through backlit grass seeds, long soft shadows, warm amber and honey tones, glowing rim light on every stalk, creamy bokeh circles, a lone figure in silhouette, dreamy cinematic nostalgia"
  },
  "mulhercomflores-Golden Hour-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Golden Hour",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Golden Hour-gpt.png",
@@ -2296,7 +2296,7 @@
   "prompt": "Elegant portrait of a young Latina woman with dark curly hair holding a vase with lilac, red, and yellow flowers, golden hour portrait photography, warm low sun behind her, glowing rim light in her hair, soft lens flare, creamy bokeh, honey and amber tones, shot at f/1.8"
  },
  "geral-Fotografia de Rua-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Rua em P&B",
   "modelo": "gpt",
   "arquivo": "geral-Fotografia de Rua-gpt.png",
@@ -2310,7 +2310,7 @@
   "prompt": "Gritty black-and-white street photograph of a rainy crossing in a crowded city, a man leaping over a puddle in mid-air, high contrast with deep shadows, heavy Tri-X film grain, geometric layers of umbrellas and reflections, 35mm Leica decisive moment"
  },
  "mulhercomflores-Fotografia de Rua-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Rua em P&B",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Fotografia de Rua-gpt.png",
@@ -2324,7 +2324,7 @@
   "prompt": "Elegant portrait of a young Black woman with short hair holding a vase with lilac, red, and yellow flowers, black-and-white candid street photography, woman with the vase of flowers walking on a busy sidewalk, harsh sunlight and deep shadows, heavy film grain, 35mm Leica, decisive moment, high contrast"
  },
  "geral-Polaroid-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Polaroid / Instax",
   "modelo": "gpt",
   "arquivo": "geral-Polaroid-gpt.png",
@@ -2338,7 +2338,7 @@
   "prompt": "Instant Polaroid photo of friends laughing on a sunlit beach boardwalk, wide white border with a handwritten caption, faded warm colors with a teal cast in the shadows, soft focus, slight vignette, direct flash glare, light leak, nostalgic summer memory"
  },
  "mulhercomflores-Polaroid-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Polaroid / Instax",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Polaroid-gpt.png",
@@ -2352,7 +2352,7 @@
   "prompt": "Elegant portrait of a young mixed-race woman with curly hair holding a vase with lilac, red, and yellow flowers, vintage Polaroid instant photo, thick white frame with handwritten caption, faded warm colors, soft focus and vignette, direct flash glare, light leak, nostalgic snapshot"
  },
  "geral-Fotografia Aerea-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia Aérea (Drone)",
   "modelo": "gpt",
   "arquivo": "geral-Fotografia Aerea-gpt.png",
@@ -2366,7 +2366,7 @@
   "prompt": "Top-down aerial drone photograph of turquoise tidal channels branching through golden salt flats like veins, tiny people for scale, abstract geometric patterns, long soft shadows at sunrise, high contrast saturated colors, 90-degree nadir view, wide-angle gimbal sharpness"
  },
  "mulhercomflores-Fotografia Aerea-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia Aérea (Drone)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Fotografia Aerea-gpt.png",
@@ -2716,7 +2716,7 @@
   "prompt": "Elegant psychedelic art portrait of a young blonde woman holding a swirling jar, flowers expanding into kaleidoscopic ripples of lilac, ruby red, and chrome yellow, 1960s art nouveau fusion"
  },
  "geral-Escultura em Marmore-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Escultura em Mármore",
   "modelo": "gpt",
   "arquivo": "geral-Escultura em Marmore-gpt.png",
@@ -2730,7 +2730,7 @@
   "prompt": "Museum photograph of a pure white Carrara marble sculpture of two lovers in an embrace, wet-drapery folds clinging to idealized anatomy, polished translucent stone with subtle veining, unfinished rough chisel marks at the base, soft raking light, dramatic baroque movement"
  },
  "mulhercomflores-Escultura em Marmore-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Escultura em Mármore",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Escultura em Marmore-gpt.png",
@@ -2744,7 +2744,7 @@
   "prompt": "Elegant portrait of a young woman with classical Mediterranean features holding a vase with lilac, red, and yellow flowers, white Carrara marble sculpture bust of a young woman holding a vase of flowers carved in stone, polished translucent surface, subtle veining, wet-drapery folds, soft museum lighting"
  },
  "geral-Bordado-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Bordado / Tapeçaria",
   "modelo": "gpt",
   "arquivo": "geral-Bordado-gpt.png",
@@ -2758,7 +2758,7 @@
   "prompt": "Close-up of a richly embroidered medieval tapestry of a unicorn in a millefleurs garden, thousands of visible stitches in wool and silk thread, raised satin-stitch texture, woven weft of deep red, blue and gold, tiny flowers in dense pattern, aged fabric with soft shadows between threads"
  },
  "mulhercomflores-Bordado-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Bordado / Tapeçaria",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Bordado-gpt.png",
@@ -2772,7 +2772,7 @@
   "prompt": "Elegant portrait of a young Latina woman with dark braided hair holding a vase with lilac, red, and yellow flowers, hand embroidery on linen, portrait stitched in satin stitch and French knots, visible thread texture and raised relief, floral border, vivid silk thread colors, soft shadows between stitches"
  },
  "geral-Arte em Neon-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Arte em Neon",
   "modelo": "gpt",
   "arquivo": "geral-Arte em Neon-gpt.png",
@@ -2786,7 +2786,7 @@
   "prompt": "Glowing neon sign art on a dark brick wall at night, hand-bent glass tubes forming a cursive word and a lightning bolt in hot pink, electric blue and violet, soft bloom halos spilling onto wet asphalt reflections, visible mounting brackets and wires, moody urban nightlife"
  },
  "mulhercomflores-Arte em Neon-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Arte em Neon",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Arte em Neon-gpt.png",
