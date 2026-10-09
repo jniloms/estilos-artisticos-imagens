@@ -1,6 +1,6 @@
 # Estilos Artísticos para Geração de Imagens
 
-Guia com 50 estilos artísticos populares em prompts de IA generativa (Midjourney, Stable Diffusion, DALL-E, Gemini, GPT). Para cada estilo há:
+Guia com 100 estilos artísticos populares em prompts de IA generativa (Midjourney, Stable Diffusion, DALL-E, Gemini, GPT). Para cada estilo há:
 
 - uma descrição das características visuais;
 - um exemplo de prompt genérico;
@@ -16,11 +16,22 @@ Guia com 50 estilos artísticos populares em prompts de IA generativa (Midjourne
 | `atualizar-imagens.py` | Script que atualiza as colunas de imagem do HTML a partir da pasta `img/`. |
 | `img/` | Imagens geradas pelos modelos (Gemini e GPT) para cada estilo. |
 
-## Categorias de estilos
+## Categorias de estilos (100 estilos)
 
 - Pintura clássica e movimentos históricos
+- Arte antiga e tradições do mundo
+- Técnicas de desenho e pintura
+- Animação, 3D e cultura pop
 - Sci-fi, fantasia e subculturas (Cyberpunk, Steampunk, Solarpunk etc.)
-- Arte digital, jogos e ilustração moderna
+- Arte digital, jogos e design gráfico
+- Fotografia e efeitos de câmera
+- Texturas de materiais, escultura e design físico
+
+## Como a página é montada
+
+Todo o conteúdo textual e os links das imagens ficam na variável `ESTILOS` (lista de objetos), dentro do próprio HTML, entre os marcadores `/*ESTILOS:inicio*/` e `/*ESTILOS:fim*/`. A tabela, o filtro, o painel de detalhes e o seletor "Mostrar prompts" são montados por JavaScript puro, sem bibliotecas externas.
+
+Cada objeto tem: `nome`, `secao`, `stems` (nomes usados nos arquivos de imagem), `periodo`, `mestres`, `caracteristicas`, `historia`, `tecnica`, `geral` e `mulher` (cada um com `prompt`, `gpt` e `gemini`).
 
 ## Atualizando as imagens
 
@@ -37,7 +48,7 @@ Em seguida, execute:
 python3 atualizar-imagens.py
 ```
 
-O script atualiza o HTML com as imagens encontradas.
+O script lê a variável `ESTILOS`, preenche os links `gpt` e `gemini` de cada estilo com as imagens encontradas e grava a lista de volta no HTML. Ele também avisa sobre arquivos de `img/` que não correspondem a nenhum estilo. O `<Estilo>` do nome do arquivo deve ser um dos valores de `stems` do estilo.
 
 ## Autor
 

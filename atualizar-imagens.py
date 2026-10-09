@@ -1,56 +1,65 @@
 #!/usr/bin/env python3
-"""Atualiza as colunas de imagem de estilos-artisticos-geracao-imagens.html
+"""Atualiza os links de imagem de estilos-artisticos-geracao-imagens.html
 com base nos arquivos encontrados na subpasta img/.
+
+Os dados da página ficam na variável ESTILOS (lista de objetos), entre os
+marcadores /*ESTILOS:inicio*/ e /*ESTILOS:fim*/. Este script lê essa lista,
+preenche os campos gpt/gemini de cada estilo e grava a lista de volta.
 
 Nomes esperados (extensões: jpeg, jpg, png, webp; maiúsculas/minúsculas ignoradas):
   geral-<Estilo>-gpt.png            geral-<Estilo>-gemini.jpeg
   mulhercomflores-<Estilo>-gpt.png  mulhercomflores-<Estilo>-gemini.jpeg
+
+<Estilo> é um dos nomes listados em "stems" no objeto do estilo (ex.: "Anime").
 """
-import html, os, re, sys, urllib.parse
+import json, os, re, sys
 
 PASTA = os.path.dirname(os.path.abspath(__file__))
 IMG = os.path.join(PASTA, "img")
 ARQ = os.path.join(PASTA, "estilos-artisticos-geracao-imagens.html")
 PREFIXO = {"geral": "geral", "mulher": "mulhercomflores"}
+MODELOS = ("gpt", "gemini")
 EXTS = ("jpeg", "jpg", "png", "webp")
+MARCADORES = re.compile(r"(/\*ESTILOS:inicio\*/)(.*?)(/\*ESTILOS:fim\*/)", re.S)
 
 os.makedirs(IMG, exist_ok=True)
 arquivos = {f.lower(): f for f in os.listdir(IMG)}
+usados = set()
 
-def achar(stems, slot):
-    tipo, tag = slot.split("-")
+
+def achar(stems, grupo, modelo):
     for s in stems:
         for e in EXTS:
-            f = arquivos.get(f"{PREFIXO[tipo]}-{s}-{tag}.{e}".lower())
+            f = arquivos.get(f"{PREFIXO[grupo]}-{s}-{modelo}.{e}".lower())
             if f:
-                return f
+                usados.add(f)
+                return "img/" + f
     return None
 
-def celula(f, alt, slot):
-    if not f:
-        return f'<td class="img empty" data-slot="{slot}"></td>'
-    u = "img/" + urllib.parse.quote(f)
-    a = html.escape(alt)
-    return (f'<td class="img" data-slot="{slot}"><button class="thumb" data-full="{u}" '
-            f'data-cap="{a}"><img loading="lazy" src="{u}" alt="{a}"></button></td>')
 
 pagina = open(ARQ, encoding="utf-8").read()
+m = MARCADORES.search(pagina)
+if not m:
+    sys.exit("Marcadores /*ESTILOS:inicio*/ e /*ESTILOS:fim*/ não encontrados no HTML.")
+estilos = json.loads(m.group(2))
+
 achadas = total = 0
+for est in estilos:
+    for grupo in PREFIXO:
+        for modelo in MODELOS:
+            caminho = achar(est["stems"], grupo, modelo)
+            est[grupo][modelo] = caminho
+            total += 1
+            achadas += bool(caminho)
 
-def linha(m):
-    global achadas, total
-    stems = html.unescape(m.group(1)).split("|")
-    nome = html.unescape(m.group(2))
-    def td(mt):
-        global achadas, total
-        slot = mt.group(1)
-        f = achar(stems, slot)
-        total += 1
-        achadas += bool(f)
-        tipo, tag = slot.split("-")
-        return celula(f, f"{nome} – {tipo} – {tag}", slot)
-    return re.sub(r'<td class="img(?: empty)?" data-slot="([^"]+)"(?:></td>|>.*?</button></td>)', td, m.group(0), flags=re.S)
+# "</" é escapado para que o JSON nunca encerre o bloco <script>.
+dados = json.dumps(estilos, ensure_ascii=False, indent=1).replace("</", "<\\/")
+nova = pagina[:m.start(2)] + dados + pagina[m.end(2):]
+open(ARQ, "w", encoding="utf-8").write(nova)
 
-novo = re.sub(r'<tr data-stems="([^"]*)" data-name="([^"]*)".*?</tr>', linha, pagina, flags=re.S)
-open(ARQ, "w", encoding="utf-8").write(novo)
-print(f"{achadas} de {total} células de imagem preenchidas.")
+print(f"{achadas} de {total} imagens ligadas ({len(estilos)} estilos).")
+sobras = sorted(f for f in arquivos.values() if f not in usados)
+if sobras:
+    print(f"{len(sobras)} arquivo(s) em img/ sem estilo correspondente (confira o nome):")
+    for f in sobras:
+        print("  -", f)
