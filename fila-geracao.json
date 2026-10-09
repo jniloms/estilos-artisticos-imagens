@@ -644,7 +644,7 @@
   "prompt": "Elegant portrait of a young Persian woman with long dark hair and kohl-lined eyes holding a vase with lilac, red, and yellow flowers, Persian Mughal miniature painting style, tiny delicate brushwork, jewel tones of lapis blue and vermilion, gold leaf details, ornate floral border with calligraphy, flat decorative perspective, garden background"
  },
  "geral-Azulejaria-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Azulejaria Portuguesa",
   "modelo": "gpt",
   "arquivo": "geral-Azulejaria-gpt.png",
@@ -658,7 +658,7 @@
   "prompt": "Large blue-and-white tile panel of a baroque courtyard scene with elegant figures and ships, cobalt blue brushwork on glossy white tin glaze, visible grid of square ceramic tiles, ornate scrolling frame with shells and cherubs, craquelure of old kiln firing"
  },
  "mulhercomflores-Azulejaria-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Azulejaria Portuguesa",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Azulejaria-gpt.png",
@@ -672,7 +672,7 @@
   "prompt": "Elegant portrait of a young Portuguese woman with dark hair gathered in a bun holding a vase with lilac, red, and yellow flowers, traditional Portuguese azulejo tile style, portrait painted in cobalt blue on white glazed ceramic tiles, visible tile grid, baroque scroll frame, glossy craquelure, floral motifs"
  },
  "geral-Geometria Islamica-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Geometria Islâmica (Arabesco)",
   "modelo": "gpt",
   "arquivo": "geral-Geometria Islamica-gpt.png",
@@ -686,7 +686,7 @@
   "prompt": "Interior dome and wall covered with interlaced eight- and twelve-pointed stars, endless tessellation, zellige tile mosaic in turquoise, cobalt blue, emerald and gold, carved stucco arabesques with vine scrolls and calligraphic band, perfect radial symmetry"
  },
  "mulhercomflores-Geometria Islamica-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Geometria Islâmica (Arabesco)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Geometria Islamica-gpt.png",
@@ -700,7 +700,7 @@
   "prompt": "Elegant portrait of a young Arab woman with olive skin and dark eyes, hair covered by an embroidered silk veil holding a vase with lilac, red, and yellow flowers, Islamic geometric art style, face framed by interlaced star patterns and arabesque vines, turquoise, cobalt and gold tiles, perfect radial symmetry, calligraphic border, flowers as ornamental motifs"
  },
  "geral-Pintura a Oleo-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Pintura a Óleo sobre Tela",
   "modelo": "gpt",
   "arquivo": "geral-Pintura a Oleo-gpt.png",
@@ -714,7 +714,7 @@
   "prompt": "Classical oil painting on stretched canvas of a quiet interior still life with a velvet drape and a brass vessel, warm glazes layered from dark to light, visible bristle strokes and impasto highlights, rich burnt umber and ochre, soft chiaroscuro, varnished depth"
  },
  "mulhercomflores-Pintura a Oleo-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Pintura a Óleo sobre Tela",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Pintura a Oleo-gpt.png",
@@ -728,7 +728,7 @@
   "prompt": "Elegant portrait of a young Latina woman with dark wavy hair holding a vase with lilac, red, and yellow flowers, classical oil painting on canvas, thick impasto highlights, glazed luminous skin tones, visible bristle brushwork, rich warm palette, varnished museum quality"
  },
  "geral-Guache-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Guache / Acrílico",
   "modelo": "gpt",
   "arquivo": "geral-Guache-gpt.png",
@@ -742,7 +742,7 @@
   "prompt": "Poster-like gouache illustration of a hillside village at golden hour, flat opaque color shapes with crisp edges, saturated coral, teal and mustard, matte velvety finish, simplified stylized trees and rooftops, mid-century concept art charm"
  },
  "mulhercomflores-Guache-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Guache / Acrílico",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Guache-gpt.png",
@@ -756,7 +756,7 @@
   "prompt": "Elegant portrait of a young Black woman with natural curly hair holding a vase with lilac, red, and yellow flowers, gouache and acrylic illustration style, flat opaque saturated color shapes, matte finish, crisp edges, simplified stylized forms, mid-century poster look"
  },
  "geral-Lapis-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Desenho a Lápis / Grafite",
   "modelo": "gpt",
   "arquivo": "geral-Lapis-gpt.png",
@@ -770,7 +770,7 @@
   "prompt": "Detailed graphite pencil drawing on white cotton paper of an old craftsman's hands holding a pocket watch, fine parallel hatching and cross-hatching, smudged soft gradients, silvery metallic sheen in the darks, light construction lines still visible, no color"
  },
  "mulhercomflores-Lapis-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Desenho a Lápis / Grafite",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Lapis-gpt.png",
@@ -784,7 +784,7 @@
   "prompt": "Elegant portrait of a young South Asian woman with a long dark braid holding a vase with lilac, red, and yellow flowers, graphite pencil drawing on white paper, fine hatching and cross-hatching, soft smudged gradients, silvery grey tones, visible construction lines, monochrome"
  },
  "geral-Nanquim-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Ilustração em Nanquim (Ink)",
   "modelo": "gpt",
   "arquivo": "geral-Nanquim-gpt.png",
@@ -798,7 +798,7 @@
   "prompt": "Black ink illustration of a gothic cathedral street at night, crisp pen outlines, dense cross-hatching and stippling for shadows, bold solid black masses against bare white paper, flowing varied line weight, no gray tones, dramatic high contrast"
  },
  "mulhercomflores-Nanquim-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Ilustração em Nanquim (Ink)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Nanquim-gpt.png",
@@ -812,7 +812,7 @@
   "prompt": "Elegant portrait of a young East Asian woman with a sleek black bob holding a vase with lilac, red, and yellow flowers, black ink pen illustration, dense cross-hatching and stippling, bold solid black shadows, flowing line weight, high contrast on white paper, art nouveau decorative linework"
  },
  "geral-Sketch-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Sketch / Croqui",
   "modelo": "gpt",
   "arquivo": "geral-Sketch-gpt.png",
@@ -826,7 +826,7 @@
   "prompt": "Loose urban sketchbook page of a sunlit café street, quick confident ink line with visible gesture, wobbly perspective guides, a few washes of watercolor dropped outside the lines, handwritten margin notes, unfinished spontaneous charm on cream paper"
  },
  "mulhercomflores-Sketch-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Sketch / Croqui",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Sketch-gpt.png",
@@ -840,7 +840,7 @@
   "prompt": "Elegant portrait of a young mixed-race Brazilian woman with voluminous curly hair holding a vase with lilac, red, and yellow flowers, fashion croquis sketch, elongated elegant figure, quick confident ink lines, loose marker and watercolor washes, visible construction lines, unfinished spontaneous look on white paper"
  },
  "geral-Quadrinhos Americanos-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Quadrinhos Americanos (Comic Book)",
   "modelo": "gpt",
   "arquivo": "geral-Quadrinhos Americanos-gpt.png",
@@ -854,7 +854,7 @@
   "prompt": "Splash page of a masked hero leaping through a rain-soaked city, extreme foreshortening, bold black ink outlines and heavy spotted blacks, flat four-color palette with Ben-Day halftone dots, jagged energy crackle, action lines and a giant onomatopoeia"
  },
  "mulhercomflores-Quadrinhos Americanos-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Quadrinhos Americanos (Comic Book)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Quadrinhos Americanos-gpt.png",
@@ -868,7 +868,7 @@
   "prompt": "Elegant portrait of a young Latina woman with long dark hair holding a vase with lilac, red, and yellow flowers, American comic book cover style, bold black ink outlines, flat four-color palette with Ben-Day halftone dots, dramatic foreshortening, dynamic heroic pose, action lines"
  },
  "geral-Cartum-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartum / Caricatura",
   "modelo": "gpt",
   "arquivo": "geral-Cartum-gpt.png",
@@ -882,7 +882,7 @@
   "prompt": "Newspaper editorial cartoon of a pompous politician with an enormous head and tiny body trampling a mountain of paperwork, exaggerated nose and chin, loose wobbly ink lines, flat watercolor wash, witty satirical energy, speech bubble"
  },
  "mulhercomflores-Cartum-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartum / Caricatura",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Cartum-gpt.png",
@@ -896,7 +896,7 @@
   "prompt": "Elegant portrait of a young redheaded woman with freckles holding a vase with lilac, red, and yellow flowers, caricature drawing style, exaggerated oversized head and big expressive eyes, tiny body, wobbly ink lines, playful flat watercolor wash, satirical humor, huge bouquet"
  },
  "geral-Gravura em Metal-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Gravura em Metal / Água-forte",
   "modelo": "gpt",
   "arquivo": "geral-Gravura em Metal-gpt.png",
@@ -910,294 +910,294 @@
   "prompt": "Intaglio etching of an imaginary baroque prison hall with endless staircases and arches, dense fine cross-hatching, deep velvety blacks, razor-thin incised lines, plate mark and cream laid paper, sepia-black ink on antique paper"
  },
  "mulhercomflores-Gravura em Metal-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Gravura em Metal / Água-forte",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Gravura em Metal-gpt.png",
   "prompt": "Elegant portrait of a young brunette woman with dark hair pinned up holding a vase with lilac, red, and yellow flowers, intaglio etching and engraving style, dense fine cross-hatching, razor-thin incised lines, deep velvety blacks, plate mark on cream antique paper, flowers drawn in meticulous detail"
  },
  "mulhercomflores-Gravura em Metal-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Gravura em Metal / Água-forte",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Gravura em Metal-gemini.jpeg",
   "prompt": "Elegant portrait of a young brunette woman with dark hair pinned up holding a vase with lilac, red, and yellow flowers, intaglio etching and engraving style, dense fine cross-hatching, razor-thin incised lines, deep velvety blacks, plate mark on cream antique paper, flowers drawn in meticulous detail"
  },
  "geral-Studio Ghibli-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Studio Ghibli",
   "modelo": "gpt",
   "arquivo": "geral-Studio Ghibli-gpt.png",
   "prompt": "Hand-painted countryside summer afternoon, towering cumulus clouds in a deep blue sky, rolling green hills and a tiny steam train crossing a wooden bridge, soft gouache watercolor backgrounds, clean simple hand-drawn characters, gentle wind, quiet nostalgia and wonder"
  },
  "geral-Studio Ghibli-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Studio Ghibli",
   "modelo": "gemini",
   "arquivo": "geral-Studio Ghibli-gemini.jpeg",
   "prompt": "Hand-painted countryside summer afternoon, towering cumulus clouds in a deep blue sky, rolling green hills and a tiny steam train crossing a wooden bridge, soft gouache watercolor backgrounds, clean simple hand-drawn characters, gentle wind, quiet nostalgia and wonder"
  },
  "mulhercomflores-Studio Ghibli-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Studio Ghibli",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Studio Ghibli-gpt.png",
   "prompt": "Elegant portrait of a young Japanese woman with short black hair holding a vase with lilac, red, and yellow flowers, hand-drawn Japanese feature animation style, soft watercolor background of green meadow and cumulus clouds, simple gentle character design, warm nostalgic light, whimsical atmosphere"
  },
  "mulhercomflores-Studio Ghibli-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Studio Ghibli",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Studio Ghibli-gemini.jpeg",
   "prompt": "Elegant portrait of a young Japanese woman with short black hair holding a vase with lilac, red, and yellow flowers, hand-drawn Japanese feature animation style, soft watercolor background of green meadow and cumulus clouds, simple gentle character design, warm nostalgic light, whimsical atmosphere"
  },
  "geral-Estilo Pixar-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Pixar (3D)",
   "modelo": "gpt",
   "arquivo": "geral-Estilo Pixar-gpt.png",
   "prompt": "Stylized 3D animated feature film still of a small round robot hugging a potted sprout in a cluttered workshop, big glossy expressive eyes, tactile plastic and rusty metal materials, soft global illumination with warm rim light, saturated cheerful palette, shallow depth of field"
  },
  "geral-Estilo Pixar-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Pixar (3D)",
   "modelo": "gemini",
   "arquivo": "geral-Estilo Pixar-gemini.jpeg",
   "prompt": "Stylized 3D animated feature film still of a small round robot hugging a potted sprout in a cluttered workshop, big glossy expressive eyes, tactile plastic and rusty metal materials, soft global illumination with warm rim light, saturated cheerful palette, shallow depth of field"
  },
  "mulhercomflores-Estilo Pixar-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Pixar (3D)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Estilo Pixar-gpt.png",
   "prompt": "Elegant portrait of a young Black woman with curly hair in a puff holding a vase with lilac, red, and yellow flowers, stylized 3D animated feature film look, big expressive eyes, soft subsurface scattering skin, rounded friendly proportions, warm cinematic lighting, saturated cheerful colors"
  },
  "mulhercomflores-Estilo Pixar-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Pixar (3D)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Estilo Pixar-gemini.jpeg",
   "prompt": "Elegant portrait of a young Black woman with curly hair in a puff holding a vase with lilac, red, and yellow flowers, stylized 3D animated feature film look, big expressive eyes, soft subsurface scattering skin, rounded friendly proportions, warm cinematic lighting, saturated cheerful colors"
  },
  "geral-Disney Classico-gpt": {
-  "status": "pendente",
+  "status": "erro",
   "estilo": "Disney Clássico (2D)",
   "modelo": "gpt",
   "arquivo": "geral-Disney Classico-gpt.png",
   "prompt": "Classic hand-inked cel animation scene of a princess singing to woodland animals in an enchanted forest clearing, smooth flowing outlines, painted watercolor backdrop, bright rich colors, expressive squash and stretch, sparkles and swirling leaves, storybook warmth"
  },
  "geral-Disney Classico-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Disney Clássico (2D)",
   "modelo": "gemini",
   "arquivo": "geral-Disney Classico-gemini.jpeg",
   "prompt": "Classic hand-inked cel animation scene of a princess singing to woodland animals in an enchanted forest clearing, smooth flowing outlines, painted watercolor backdrop, bright rich colors, expressive squash and stretch, sparkles and swirling leaves, storybook warmth"
  },
  "mulhercomflores-Disney Classico-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Disney Clássico (2D)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Disney Classico-gpt.png",
   "prompt": "Elegant portrait of a young woman with warm brown skin and long dark brown hair holding a vase with lilac, red, and yellow flowers, classic 2D hand-drawn animated fairy-tale style, smooth flowing ink outlines, painted storybook background, bright rich cel colors, graceful princess-like pose, songbirds and flower petals"
  },
  "mulhercomflores-Disney Classico-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Disney Clássico (2D)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Disney Classico-gemini.jpeg",
   "prompt": "Elegant portrait of a young woman with warm brown skin and long dark brown hair holding a vase with lilac, red, and yellow flowers, classic 2D hand-drawn animated fairy-tale style, smooth flowing ink outlines, painted storybook background, bright rich cel colors, graceful princess-like pose, songbirds and flower petals"
  },
  "geral-Cartoon Moderno-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartoon Moderno (Western Animation)",
   "modelo": "gpt",
   "arquivo": "geral-Cartoon Moderno-gpt.png",
   "prompt": "Flat vector cartoon still of a goofy hero and a talking dog on a bright pastel desert road, thick uniform outlines, simple geometric character shapes, flat solid colors with no shading, wobbly squash-and-stretch pose, bold graphic background shapes, saturated candy palette"
  },
  "geral-Cartoon Moderno-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartoon Moderno (Western Animation)",
   "modelo": "gemini",
   "arquivo": "geral-Cartoon Moderno-gemini.jpeg",
   "prompt": "Flat vector cartoon still of a goofy hero and a talking dog on a bright pastel desert road, thick uniform outlines, simple geometric character shapes, flat solid colors with no shading, wobbly squash-and-stretch pose, bold graphic background shapes, saturated candy palette"
  },
  "mulhercomflores-Cartoon Moderno-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartoon Moderno (Western Animation)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Cartoon Moderno-gpt.png",
   "prompt": "Elegant portrait of a young Latina woman with black hair and a ponytail holding a vase with lilac, red, and yellow flowers, modern TV cartoon style, simple geometric character shapes, thick uniform outline, flat solid colors with no shading, big dot eyes, saturated candy palette, graphic flower shapes"
  },
  "mulhercomflores-Cartoon Moderno-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartoon Moderno (Western Animation)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Cartoon Moderno-gemini.jpeg",
   "prompt": "Elegant portrait of a young Latina woman with black hair and a ponytail holding a vase with lilac, red, and yellow flowers, modern TV cartoon style, simple geometric character shapes, thick uniform outline, flat solid colors with no shading, big dot eyes, saturated candy palette, graphic flower shapes"
  },
  "geral-Render 3D-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Render 3D (Octane / Unreal Engine)",
   "modelo": "gpt",
   "arquivo": "geral-Render 3D-gpt.png",
   "prompt": "Octane render of a floating iridescent glass orb cradling a tiny glowing city, ray-traced reflections and refractions, volumetric god rays, subsurface scattering, dark studio with soft rim light, ultra detailed, 8k, cinematic depth of field, surreal futurism"
  },
  "geral-Render 3D-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Render 3D (Octane / Unreal Engine)",
   "modelo": "gemini",
   "arquivo": "geral-Render 3D-gemini.jpeg",
   "prompt": "Octane render of a floating iridescent glass orb cradling a tiny glowing city, ray-traced reflections and refractions, volumetric god rays, subsurface scattering, dark studio with soft rim light, ultra detailed, 8k, cinematic depth of field, surreal futurism"
  },
  "mulhercomflores-Render 3D-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Render 3D (Octane / Unreal Engine)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Render 3D-gpt.png",
   "prompt": "Elegant portrait of a young East Asian woman with long black hair holding a vase with lilac, red, and yellow flowers, 3D render in Octane style, glossy iridescent skin and glass-like petals, ray-traced reflections, volumetric rim lighting, ultra detailed, dark studio backdrop, surreal futurism"
  },
  "mulhercomflores-Render 3D-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Render 3D (Octane / Unreal Engine)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Render 3D-gemini.jpeg",
   "prompt": "Elegant portrait of a young East Asian woman with long black hair holding a vase with lilac, red, and yellow flowers, 3D render in Octane style, glossy iridescent skin and glass-like petals, ray-traced reflections, volumetric rim lighting, ultra detailed, dark studio backdrop, surreal futurism"
  },
  "geral-Isometrico-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Isométrico",
   "modelo": "gpt",
   "arquivo": "geral-Isometrico-gpt.png",
   "prompt": "Isometric cutaway diorama of a cozy tiny room floating on a clean pastel background, 30-degree projection, miniature furniture and plants, soft long shadows, crisp edges, limited harmonious palette, charming game-asset look"
  },
  "geral-Isometrico-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Isométrico",
   "modelo": "gemini",
   "arquivo": "geral-Isometrico-gemini.jpeg",
   "prompt": "Isometric cutaway diorama of a cozy tiny room floating on a clean pastel background, 30-degree projection, miniature furniture and plants, soft long shadows, crisp edges, limited harmonious palette, charming game-asset look"
  },
  "mulhercomflores-Isometrico-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Isométrico",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Isometrico-gpt.png",
   "prompt": "Elegant portrait of a young South Asian woman with long dark hair holding a vase with lilac, red, and yellow flowers, isometric miniature illustration, tiny diorama room with a woman and a vase of flowers, 30-degree projection, clean crisp edges, soft shadows, pastel limited palette"
  },
  "mulhercomflores-Isometrico-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Isométrico",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Isometrico-gemini.jpeg",
   "prompt": "Elegant portrait of a young South Asian woman with long dark hair holding a vase with lilac, red, and yellow flowers, isometric miniature illustration, tiny diorama room with a woman and a vase of flowers, 30-degree projection, clean crisp edges, soft shadows, pastel limited palette"
  },
  "geral-Kawaii-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Kawaii / Chibi",
   "modelo": "gpt",
   "arquivo": "geral-Kawaii-gpt.png",
   "prompt": "Kawaii chibi mascot cluster of a tiny round bunny and a sleepy cloud sharing a strawberry cake, oversized head and stubby body, huge sparkling eyes with tiny mouth, thick soft outlines, pastel pink, mint and lavender palette, sparkles, hearts and sprinkles"
  },
  "geral-Kawaii-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Kawaii / Chibi",
   "modelo": "gemini",
   "arquivo": "geral-Kawaii-gemini.jpeg",
   "prompt": "Kawaii chibi mascot cluster of a tiny round bunny and a sleepy cloud sharing a strawberry cake, oversized head and stubby body, huge sparkling eyes with tiny mouth, thick soft outlines, pastel pink, mint and lavender palette, sparkles, hearts and sprinkles"
  },
  "mulhercomflores-Kawaii-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Kawaii / Chibi",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Kawaii-gpt.png",
   "prompt": "Elegant portrait of a young Japanese woman with black twin tails holding a vase with lilac, red, and yellow flowers, kawaii chibi illustration, oversized head and tiny body, huge sparkling eyes, tiny mouth and blush cheeks, thick soft outlines, pastel pink and lavender palette, sparkles and hearts, chubby flowers"
  },
  "mulhercomflores-Kawaii-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Kawaii / Chibi",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Kawaii-gemini.jpeg",
   "prompt": "Elegant portrait of a young Japanese woman with black twin tails holding a vase with lilac, red, and yellow flowers, kawaii chibi illustration, oversized head and tiny body, huge sparkling eyes, tiny mouth and blush cheeks, thick soft outlines, pastel pink and lavender palette, sparkles and hearts, chubby flowers"
  },
  "geral-Art Toy-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Art Toy / Vinil",
   "modelo": "gpt",
   "arquivo": "geral-Art Toy-gpt.png",
   "prompt": "Studio product photo of a glossy vinyl designer toy, a chubby bear-like character with X-shaped eyes and rounded limbs, solid pastel pink body with crisp paint application, soft reflections on a seamless backdrop, shallow depth of field, collectible blind-box look"
  },
  "geral-Art Toy-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Art Toy / Vinil",
   "modelo": "gemini",
   "arquivo": "geral-Art Toy-gemini.jpeg",
   "prompt": "Studio product photo of a glossy vinyl designer toy, a chubby bear-like character with X-shaped eyes and rounded limbs, solid pastel pink body with crisp paint application, soft reflections on a seamless backdrop, shallow depth of field, collectible blind-box look"
  },
  "mulhercomflores-Art Toy-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Art Toy / Vinil",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Art Toy-gpt.png",
   "prompt": "Elegant portrait of a young Black woman with short natural hair holding a vase with lilac, red, and yellow flowers, designer vinyl art toy figure, glossy rounded body, minimalist dot eyes, solid pastel paint, collectible blind-box look, studio product lighting, flowers as sculpted accessories"
  },
  "mulhercomflores-Art Toy-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Art Toy / Vinil",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Art Toy-gemini.jpeg",
   "prompt": "Elegant portrait of a young Black woman with short natural hair holding a vase with lilac, red, and yellow flowers, designer vinyl art toy figure, glossy rounded body, minimalist dot eyes, solid pastel paint, collectible blind-box look, studio product lighting, flowers as sculpted accessories"
  },
  "geral-Tim Burton-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Tim Burton",
   "modelo": "gpt",
   "arquivo": "geral-Tim Burton-gpt.png",
   "prompt": "Whimsical gothic suburb with crooked houses and twisting leafless trees under an enormous swirling moon, spiral hills and black-and-white striped details, a gaunt pale figure with hollow dark eyes and wild hair, desaturated palette with violet accents, melancholic macabre humor"
  },
  "geral-Tim Burton-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Tim Burton",
   "modelo": "gemini",
   "arquivo": "geral-Tim Burton-gemini.jpeg",
   "prompt": "Whimsical gothic suburb with crooked houses and twisting leafless trees under an enormous swirling moon, spiral hills and black-and-white striped details, a gaunt pale figure with hollow dark eyes and wild hair, desaturated palette with violet accents, melancholic macabre humor"
  },
  "mulhercomflores-Tim Burton-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Tim Burton",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Tim Burton-gpt.png",
   "prompt": "Elegant portrait of a pale gaunt young woman with tousled black hair holding a vase with lilac, red, and yellow flowers, whimsical gothic macabre illustration, pale gaunt woman with huge hollow dark eyes and tousled black hair, striped dress, swirling twisted trees, desaturated palette with violet accents, melancholic charm"
  },
  "mulhercomflores-Tim Burton-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Estilo Tim Burton",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Tim Burton-gemini.jpeg",
   "prompt": "Elegant portrait of a pale gaunt young woman with tousled black hair holding a vase with lilac, red, and yellow flowers, whimsical gothic macabre illustration, pale gaunt woman with huge hollow dark eyes and tousled black hair, striped dress, swirling twisted trees, desaturated palette with violet accents, melancholic charm"
  },
  "geral-Pop Surrealism-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Pop Surrealism (Lowbrow)",
   "modelo": "gpt",
   "arquivo": "geral-Pop Surrealism-gpt.png",
   "prompt": "Glossy oil painting on wood panel of a doe-eyed girl in a candy-pink dress holding a meat-shaped teddy bear, surrounded by cartoon skulls, balloons and tiny strange creatures, saturated bubblegum and teal palette, polished smooth finish, symmetrical altar-like composition, cute yet unsettling"
  },
  "geral-Pop Surrealism-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Pop Surrealism (Lowbrow)",
   "modelo": "gemini",
   "arquivo": "geral-Pop Surrealism-gemini.jpeg",
   "prompt": "Glossy oil painting on wood panel of a doe-eyed girl in a candy-pink dress holding a meat-shaped teddy bear, surrounded by cartoon skulls, balloons and tiny strange creatures, saturated bubblegum and teal palette, polished smooth finish, symmetrical altar-like composition, cute yet unsettling"
  },
  "mulhercomflores-Pop Surrealism-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Pop Surrealism (Lowbrow)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Pop Surrealism-gpt.png",
   "prompt": "Elegant portrait of a young woman with a glossy black bob and porcelain skin holding a vase with lilac, red, and yellow flowers, pop surrealism lowbrow painting, enormous glossy doe eyes, porcelain skin, bubblegum pink and teal palette, tiny strange creatures and balloons among the flowers, polished smooth oil finish, cute yet unsettling"
  },
  "mulhercomflores-Pop Surrealism-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Pop Surrealism (Lowbrow)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Pop Surrealism-gemini.jpeg",
@@ -1428,140 +1428,140 @@
   "prompt": "Elegant biomechanical portrait of a young blonde woman, her hands fusing into an organic metallic jar holding synthetic lilac, red, and yellow flowers made of cables and petals, H.R. Giger style"
  },
  "geral-Vaporwave-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Vaporwave",
   "modelo": "gpt",
   "arquivo": "geral-Vaporwave-gpt.png",
   "prompt": "Pink and cyan sunset gradient over a checkered floor, a white marble Greek bust with sunglasses, palm trees, retro grid sun, floating Windows 95 window panels, vertical katakana text, VHS scanlines and glitch noise, nostalgic mall aesthetic"
  },
  "geral-Vaporwave-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Vaporwave",
   "modelo": "gemini",
   "arquivo": "geral-Vaporwave-gemini.jpeg",
   "prompt": "Pink and cyan sunset gradient over a checkered floor, a white marble Greek bust with sunglasses, palm trees, retro grid sun, floating Windows 95 window panels, vertical katakana text, VHS scanlines and glitch noise, nostalgic mall aesthetic"
  },
  "mulhercomflores-Vaporwave-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Vaporwave",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Vaporwave-gpt.png",
   "prompt": "Elegant portrait of a young Japanese woman with long black hair holding a vase with lilac, red, and yellow flowers, vaporwave aesthetic, pink and cyan gradient sunset, marble Greek statue and palm trees, retro grid, floating glitchy window panels, katakana text, VHS scanlines, dreamy nostalgia"
  },
  "mulhercomflores-Vaporwave-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Vaporwave",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Vaporwave-gemini.jpeg",
   "prompt": "Elegant portrait of a young Japanese woman with long black hair holding a vase with lilac, red, and yellow flowers, vaporwave aesthetic, pink and cyan gradient sunset, marble Greek statue and palm trees, retro grid, floating glitchy window panels, katakana text, VHS scanlines, dreamy nostalgia"
  },
  "geral-Atompunk-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Atompunk",
   "modelo": "gpt",
   "arquivo": "geral-Atompunk-gpt.png",
   "prompt": "1950s space-age suburban kitchen of tomorrow, boomerang-shaped atomic patterns, chrome rocket-fin appliances, turquoise and cherry red palette, a smiling family beside a ray-gun toaster and a flying saucer outside the window, airbrushed retro advertising illustration"
  },
  "geral-Atompunk-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Atompunk",
   "modelo": "gemini",
   "arquivo": "geral-Atompunk-gemini.jpeg",
   "prompt": "1950s space-age suburban kitchen of tomorrow, boomerang-shaped atomic patterns, chrome rocket-fin appliances, turquoise and cherry red palette, a smiling family beside a ray-gun toaster and a flying saucer outside the window, airbrushed retro advertising illustration"
  },
  "mulhercomflores-Atompunk-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Atompunk",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Atompunk-gpt.png",
   "prompt": "Elegant portrait of a young redheaded woman with a 1950s curled hairstyle holding a vase with lilac, red, and yellow flowers, 1950s atompunk retro-futurist advertising illustration, turquoise and cherry red palette, atomic starburst patterns, chrome space-age props, smiling housewife pose, airbrushed gouache look"
  },
  "mulhercomflores-Atompunk-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Atompunk",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Atompunk-gemini.jpeg",
   "prompt": "Elegant portrait of a young redheaded woman with a 1950s curled hairstyle holding a vase with lilac, red, and yellow flowers, 1950s atompunk retro-futurist advertising illustration, turquoise and cherry red palette, atomic starburst patterns, chrome space-age props, smiling housewife pose, airbrushed gouache look"
  },
  "geral-Biopunk-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Biopunk",
   "modelo": "gpt",
   "arquivo": "geral-Biopunk-gpt.png",
   "prompt": "Underground genetic lab interior with glowing translucent vats of floating embryonic creatures, vines and veiny flesh-like tubing growing through the machinery, acid green and sickly yellow bioluminescence, wet glossy textures, petri dishes and syringes, dystopian biotech atmosphere"
  },
  "geral-Biopunk-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Biopunk",
   "modelo": "gemini",
   "arquivo": "geral-Biopunk-gemini.jpeg",
   "prompt": "Underground genetic lab interior with glowing translucent vats of floating embryonic creatures, vines and veiny flesh-like tubing growing through the machinery, acid green and sickly yellow bioluminescence, wet glossy textures, petri dishes and syringes, dystopian biotech atmosphere"
  },
  "mulhercomflores-Biopunk-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Biopunk",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Biopunk-gpt.png",
   "prompt": "Elegant portrait of a young South Asian woman with dark hair holding a vase with lilac, red, and yellow flowers, biopunk style, translucent skin with faint glowing veins, orchids growing from her sleeve, laboratory glassware and vats in the background, acid green bioluminescent light, wet organic textures"
  },
  "mulhercomflores-Biopunk-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Biopunk",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Biopunk-gemini.jpeg",
   "prompt": "Elegant portrait of a young South Asian woman with dark hair holding a vase with lilac, red, and yellow flowers, biopunk style, translucent skin with faint glowing veins, orchids growing from her sleeve, laboratory glassware and vats in the background, acid green bioluminescent light, wet organic textures"
  },
  "geral-Afrofuturismo-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Afrofuturismo",
   "modelo": "gpt",
   "arquivo": "geral-Afrofuturismo-gpt.png",
   "prompt": "Majestic futuristic African metropolis at dusk with golden towers and glowing circuit patterns, a regal astronaut-queen in a gilded kente-patterned spacesuit with a sculptural braided crown, saturated gold, cobalt and magenta, ancestral geometric motifs, cosmic nebula sky"
  },
  "geral-Afrofuturismo-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Afrofuturismo",
   "modelo": "gemini",
   "arquivo": "geral-Afrofuturismo-gemini.jpeg",
   "prompt": "Majestic futuristic African metropolis at dusk with golden towers and glowing circuit patterns, a regal astronaut-queen in a gilded kente-patterned spacesuit with a sculptural braided crown, saturated gold, cobalt and magenta, ancestral geometric motifs, cosmic nebula sky"
  },
  "mulhercomflores-Afrofuturismo-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Afrofuturismo",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Afrofuturismo-gpt.png",
   "prompt": "Elegant portrait of a young Black woman with natural hair holding a vase with lilac, red, and yellow flowers, Afrofuturist portrait, regal pose, intricate braided crown, gold jewelry and kente-patterned futuristic garment, glowing geometric motifs, cosmic nebula background, saturated gold, cobalt and magenta"
  },
  "mulhercomflores-Afrofuturismo-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Afrofuturismo",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Afrofuturismo-gemini.jpeg",
   "prompt": "Elegant portrait of a young Black woman with natural hair holding a vase with lilac, red, and yellow flowers, Afrofuturist portrait, regal pose, intricate braided crown, gold jewelry and kente-patterned futuristic garment, glowing geometric motifs, cosmic nebula background, saturated gold, cobalt and magenta"
  },
  "geral-Fantasia Epica-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fantasia Épica / RPG (D&D)",
   "modelo": "gpt",
   "arquivo": "geral-Fantasia Epica-gpt.png",
   "prompt": "Epic oil painting of an armored knight and a hooded sorceress facing a colossal dragon perched on a ruined mountain fortress, stormy sunset sky with shafts of light, glowing runes, intricate plate armor and scales, painterly fantasy book cover realism, heroic dramatic composition"
  },
  "geral-Fantasia Epica-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fantasia Épica / RPG (D&D)",
   "modelo": "gemini",
   "arquivo": "geral-Fantasia Epica-gemini.jpeg",
   "prompt": "Epic oil painting of an armored knight and a hooded sorceress facing a colossal dragon perched on a ruined mountain fortress, stormy sunset sky with shafts of light, glowing runes, intricate plate armor and scales, painterly fantasy book cover realism, heroic dramatic composition"
  },
  "mulhercomflores-Fantasia Epica-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fantasia Épica / RPG (D&D)",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Fantasia Epica-gpt.png",
   "prompt": "Elegant portrait of a young woman with long dark auburn hair holding a vase with lilac, red, and yellow flowers, epic fantasy book cover painting, ornate elven gown and mantle, enchanted glowing flowers in a crystal vase, misty ancient forest and castle, dramatic golden light, painterly realism"
  },
  "mulhercomflores-Fantasia Epica-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fantasia Épica / RPG (D&D)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Fantasia Epica-gemini.jpeg",
@@ -1848,98 +1848,98 @@
   "prompt": "Elegant street art stencil portrait of a young blonde woman holding a jar on a concrete wall, spray painted lilac, red, and yellow flowers, vibrant paint drips, urban graffiti masterwork"
  },
  "geral-Flat Design-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Flat Design Vetorial",
   "modelo": "gpt",
   "arquivo": "geral-Flat Design-gpt.png",
   "prompt": "Flat vector illustration of a bustling city street with simple geometric buildings, solid color fills with no gradients, shadows or textures, limited vibrant palette of coral, teal and sunflower yellow, clean minimal shapes, editorial infographic style"
  },
  "geral-Flat Design-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Flat Design Vetorial",
   "modelo": "gemini",
   "arquivo": "geral-Flat Design-gemini.jpeg",
   "prompt": "Flat vector illustration of a bustling city street with simple geometric buildings, solid color fills with no gradients, shadows or textures, limited vibrant palette of coral, teal and sunflower yellow, clean minimal shapes, editorial infographic style"
  },
  "mulhercomflores-Flat Design-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Flat Design Vetorial",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Flat Design-gpt.png",
   "prompt": "Elegant portrait of a young Black woman with an afro puff holding a vase with lilac, red, and yellow flowers, flat design vector illustration, woman built from simple geometric shapes, solid color fills, no gradients or shadows, limited vibrant palette, clean minimal vase and flowers"
  },
  "mulhercomflores-Flat Design-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Flat Design Vetorial",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Flat Design-gemini.jpeg",
   "prompt": "Elegant portrait of a young Black woman with an afro puff holding a vase with lilac, red, and yellow flowers, flat design vector illustration, woman built from simple geometric shapes, solid color fills, no gradients or shadows, limited vibrant palette, clean minimal vase and flowers"
  },
  "geral-Memphis-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Memphis Design",
   "modelo": "gpt",
   "arquivo": "geral-Memphis-gpt.png",
   "prompt": "Playful Memphis-style composition on a white ground, squiggly black lines, triangles, zigzags, dots and terrazzo-speckle patterns in hot pink, turquoise, lemon yellow and black, asymmetrical colorful abstract furniture-like blocks, 1980s postmodern energy"
  },
  "geral-Memphis-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Memphis Design",
   "modelo": "gemini",
   "arquivo": "geral-Memphis-gemini.jpeg",
   "prompt": "Playful Memphis-style composition on a white ground, squiggly black lines, triangles, zigzags, dots and terrazzo-speckle patterns in hot pink, turquoise, lemon yellow and black, asymmetrical colorful abstract furniture-like blocks, 1980s postmodern energy"
  },
  "mulhercomflores-Memphis-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Memphis Design",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Memphis-gpt.png",
   "prompt": "Elegant portrait of a young Latina woman with dark curly hair holding a vase with lilac, red, and yellow flowers, Memphis design style 1980s, woman and vase shown with bold geometric shapes, squiggles, zigzags and dots in hot pink, turquoise and yellow, terrazzo pattern background, playful asymmetry"
  },
  "mulhercomflores-Memphis-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Memphis Design",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Memphis-gemini.jpeg",
   "prompt": "Elegant portrait of a young Latina woman with dark curly hair holding a vase with lilac, red, and yellow flowers, Memphis design style 1980s, woman and vase shown with bold geometric shapes, squiggles, zigzags and dots in hot pink, turquoise and yellow, terrazzo pattern background, playful asymmetry"
  },
  "geral-Op Art-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Op Art",
   "modelo": "gpt",
   "arquivo": "geral-Op Art-gpt.png",
   "prompt": "Pure black-and-white op art composition of concentric warped circles and undulating parallel lines creating an illusion of a pulsing three-dimensional sphere, razor-sharp edges, high contrast, moiré vibration, hypnotic optical illusion, flat acrylic finish"
  },
  "geral-Op Art-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Op Art",
   "modelo": "gemini",
   "arquivo": "geral-Op Art-gemini.jpeg",
   "prompt": "Pure black-and-white op art composition of concentric warped circles and undulating parallel lines creating an illusion of a pulsing three-dimensional sphere, razor-sharp edges, high contrast, moiré vibration, hypnotic optical illusion, flat acrylic finish"
  },
  "mulhercomflores-Op Art-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Op Art",
   "modelo": "gpt",
   "arquivo": "mulhercomflores-Op Art-gpt.png",
   "prompt": "Elegant portrait of a young Middle Eastern woman with dark hair holding a vase with lilac, red, and yellow flowers, op art style, portrait distorted by black-and-white undulating parallel lines and concentric circles, optical illusion of movement, razor-sharp edges, high contrast, flowers made of moiré rings"
  },
  "mulhercomflores-Op Art-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Op Art",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Op Art-gemini.jpeg",
   "prompt": "Elegant portrait of a young Middle Eastern woman with dark hair holding a vase with lilac, red, and yellow flowers, op art style, portrait distorted by black-and-white undulating parallel lines and concentric circles, optical illusion of movement, razor-sharp edges, high contrast, flowers made of moiré rings"
  },
  "geral-Cartaz Vintage-gpt": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartaz Vintage / Propaganda",
   "modelo": "gpt",
   "arquivo": "geral-Cartaz Vintage-gpt.png",
   "prompt": "Vintage lithograph propaganda poster, a heroic worker pointing toward a rising sun seen from a low angle, bold diagonal composition, limited flat palette of red, black and cream, huge condensed sans-serif slogan, slightly misregistered ink and aged paper folds"
  },
  "geral-Cartaz Vintage-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartaz Vintage / Propaganda",
   "modelo": "gemini",
   "arquivo": "geral-Cartaz Vintage-gemini.jpeg",
@@ -1953,7 +1953,7 @@
   "prompt": "Elegant portrait of a young brunette woman with dark braided hair holding a vase with lilac, red, and yellow flowers, vintage propaganda poster style, heroic low-angle pose holding up the vase of flowers, bold flat red, black and cream palette, large condensed slogan text, grainy lithograph print, aged paper"
  },
  "mulhercomflores-Cartaz Vintage-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Cartaz Vintage / Propaganda",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Cartaz Vintage-gemini.jpeg",
@@ -2191,7 +2191,7 @@
   "prompt": "Hyperrealistic close-up portrait of an elderly fisherman with weathered skin, every pore, wrinkle and eyelash rendered in microscopic detail, glassy wet reflections in the eyes, razor-sharp focus with soft background blur, natural window light, indistinguishable from a photograph, 8k"
  },
  "geral-Fotorrealismo-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotorrealismo / Hiperrealismo",
   "modelo": "gemini",
   "arquivo": "geral-Fotorrealismo-gemini.jpeg",
@@ -2205,7 +2205,7 @@
   "prompt": "Elegant portrait of a young Black woman holding a vase with lilac, red, and yellow flowers, photorealistic hyperrealism portrait, visible skin pores and fine hairs, glossy wet reflections on the glass vase, shot on 85mm lens, razor-sharp focus, natural window light, 8k detail"
  },
  "mulhercomflores-Fotorrealismo-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotorrealismo / Hiperrealismo",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Fotorrealismo-gemini.jpeg",
@@ -2219,7 +2219,7 @@
   "prompt": "Classic black-and-white studio portrait of a weathered jazz musician against a seamless grey backdrop, Rembrandt lighting with a triangle of light on the cheek, deep sculpted shadows, direct intense gaze, 85mm lens, fine film grain, timeless and dignified"
  },
  "geral-Retrato de Estudio-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Retrato de Estúdio",
   "modelo": "gemini",
   "arquivo": "geral-Retrato de Estudio-gemini.jpeg",
@@ -2233,7 +2233,7 @@
   "prompt": "Elegant portrait of a young South Asian woman with dark hair holding a vase with lilac, red, and yellow flowers, classic studio portrait photograph, Rembrandt lighting with triangle of light on the cheek, seamless grey backdrop, soft beauty dish, 85mm lens, direct gaze, refined retouching"
  },
  "mulhercomflores-Retrato de Estudio-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Retrato de Estúdio",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Retrato de Estudio-gemini.jpeg",
@@ -2247,7 +2247,7 @@
   "prompt": "High-end commercial product photograph of a crystal perfume bottle on a mirrored acrylic surface, soft large softbox lighting with crisp rim highlights, clean seamless pastel backdrop, perfect reflections, macro sharpness edge to edge, subtle floral props, luxury advertising look"
  },
  "geral-Fotografia de Produto-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Produto",
   "modelo": "gemini",
   "arquivo": "geral-Fotografia de Produto-gemini.jpeg",
@@ -2261,7 +2261,7 @@
   "prompt": "Elegant portrait of a young woman with brown skin holding a vase with lilac, red, and yellow flowers, commercial product-style photograph, elegant hands of a young woman with brown skin presenting a glass vase of lilac, red and yellow flowers, seamless pastel backdrop, soft softbox lighting, crisp reflections, macro sharpness"
  },
  "mulhercomflores-Fotografia de Produto-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Produto",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Fotografia de Produto-gemini.jpeg",
@@ -2275,7 +2275,7 @@
   "prompt": "Wheat field at golden hour, low sun flaring through backlit grass seeds, long soft shadows, warm amber and honey tones, glowing rim light on every stalk, creamy bokeh circles, a lone figure in silhouette, dreamy cinematic nostalgia"
  },
  "geral-Golden Hour-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Golden Hour",
   "modelo": "gemini",
   "arquivo": "geral-Golden Hour-gemini.jpeg",
@@ -2289,7 +2289,7 @@
   "prompt": "Elegant portrait of a young Latina woman with dark curly hair holding a vase with lilac, red, and yellow flowers, golden hour portrait photography, warm low sun behind her, glowing rim light in her hair, soft lens flare, creamy bokeh, honey and amber tones, shot at f/1.8"
  },
  "mulhercomflores-Golden Hour-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Golden Hour",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Golden Hour-gemini.jpeg",
@@ -2303,7 +2303,7 @@
   "prompt": "Gritty black-and-white street photograph of a rainy crossing in a crowded city, a man leaping over a puddle in mid-air, high contrast with deep shadows, heavy Tri-X film grain, geometric layers of umbrellas and reflections, 35mm Leica decisive moment"
  },
  "geral-Fotografia de Rua-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Rua em P&B",
   "modelo": "gemini",
   "arquivo": "geral-Fotografia de Rua-gemini.jpeg",
@@ -2317,7 +2317,7 @@
   "prompt": "Elegant portrait of a young Black woman with short hair holding a vase with lilac, red, and yellow flowers, black-and-white candid street photography, woman with the vase of flowers walking on a busy sidewalk, harsh sunlight and deep shadows, heavy film grain, 35mm Leica, decisive moment, high contrast"
  },
  "mulhercomflores-Fotografia de Rua-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia de Rua em P&B",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Fotografia de Rua-gemini.jpeg",
@@ -2331,7 +2331,7 @@
   "prompt": "Instant Polaroid photo of friends laughing on a sunlit beach boardwalk, wide white border with a handwritten caption, faded warm colors with a teal cast in the shadows, soft focus, slight vignette, direct flash glare, light leak, nostalgic summer memory"
  },
  "geral-Polaroid-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Polaroid / Instax",
   "modelo": "gemini",
   "arquivo": "geral-Polaroid-gemini.jpeg",
@@ -2345,7 +2345,7 @@
   "prompt": "Elegant portrait of a young mixed-race woman with curly hair holding a vase with lilac, red, and yellow flowers, vintage Polaroid instant photo, thick white frame with handwritten caption, faded warm colors, soft focus and vignette, direct flash glare, light leak, nostalgic snapshot"
  },
  "mulhercomflores-Polaroid-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Polaroid / Instax",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Polaroid-gemini.jpeg",
@@ -2359,7 +2359,7 @@
   "prompt": "Top-down aerial drone photograph of turquoise tidal channels branching through golden salt flats like veins, tiny people for scale, abstract geometric patterns, long soft shadows at sunrise, high contrast saturated colors, 90-degree nadir view, wide-angle gimbal sharpness"
  },
  "geral-Fotografia Aerea-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia Aérea (Drone)",
   "modelo": "gemini",
   "arquivo": "geral-Fotografia Aerea-gemini.jpeg",
@@ -2373,7 +2373,7 @@
   "prompt": "Elegant portrait of a young woman with dark hair holding a vase with lilac, red, and yellow flowers, aerial top-down drone shot of a tiny young woman with dark hair standing on a green meadow holding a vase of lilac, red and yellow flowers, long soft shadow, geometric field patterns, wide-angle gimbal sharpness"
  },
  "mulhercomflores-Fotografia Aerea-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Fotografia Aérea (Drone)",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Fotografia Aerea-gemini.jpeg",
@@ -2723,7 +2723,7 @@
   "prompt": "Museum photograph of a pure white Carrara marble sculpture of two lovers in an embrace, wet-drapery folds clinging to idealized anatomy, polished translucent stone with subtle veining, unfinished rough chisel marks at the base, soft raking light, dramatic baroque movement"
  },
  "geral-Escultura em Marmore-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Escultura em Mármore",
   "modelo": "gemini",
   "arquivo": "geral-Escultura em Marmore-gemini.jpeg",
@@ -2737,7 +2737,7 @@
   "prompt": "Elegant portrait of a young woman with classical Mediterranean features holding a vase with lilac, red, and yellow flowers, white Carrara marble sculpture bust of a young woman holding a vase of flowers carved in stone, polished translucent surface, subtle veining, wet-drapery folds, soft museum lighting"
  },
  "mulhercomflores-Escultura em Marmore-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Escultura em Mármore",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Escultura em Marmore-gemini.jpeg",
@@ -2751,7 +2751,7 @@
   "prompt": "Close-up of a richly embroidered medieval tapestry of a unicorn in a millefleurs garden, thousands of visible stitches in wool and silk thread, raised satin-stitch texture, woven weft of deep red, blue and gold, tiny flowers in dense pattern, aged fabric with soft shadows between threads"
  },
  "geral-Bordado-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Bordado / Tapeçaria",
   "modelo": "gemini",
   "arquivo": "geral-Bordado-gemini.jpeg",
@@ -2765,7 +2765,7 @@
   "prompt": "Elegant portrait of a young Latina woman with dark braided hair holding a vase with lilac, red, and yellow flowers, hand embroidery on linen, portrait stitched in satin stitch and French knots, visible thread texture and raised relief, floral border, vivid silk thread colors, soft shadows between stitches"
  },
  "mulhercomflores-Bordado-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Bordado / Tapeçaria",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Bordado-gemini.jpeg",
@@ -2779,7 +2779,7 @@
   "prompt": "Glowing neon sign art on a dark brick wall at night, hand-bent glass tubes forming a cursive word and a lightning bolt in hot pink, electric blue and violet, soft bloom halos spilling onto wet asphalt reflections, visible mounting brackets and wires, moody urban nightlife"
  },
  "geral-Arte em Neon-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Arte em Neon",
   "modelo": "gemini",
   "arquivo": "geral-Arte em Neon-gemini.jpeg",
@@ -2793,7 +2793,7 @@
   "prompt": "Elegant portrait of a young East Asian woman with black hair holding a vase with lilac, red, and yellow flowers, neon sign art portrait, woman's profile and a vase of flowers drawn as glowing hand-bent glass tubes in hot pink, electric blue and violet, bright halo bloom, dark brick wall, wet reflections"
  },
  "mulhercomflores-Arte em Neon-gemini": {
-  "status": "pendente",
+  "status": "feito",
   "estilo": "Arte em Neon",
   "modelo": "gemini",
   "arquivo": "mulhercomflores-Arte em Neon-gemini.jpeg",
