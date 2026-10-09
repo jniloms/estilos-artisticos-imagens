@@ -40,6 +40,9 @@ tr.hide{display:none}
 dialog{border:0;background:#000;padding:0;max-width:94vw;max-height:94vh;border-radius:6px}
 dialog::backdrop{background:rgba(0,0,0,.8)}
 dialog img{display:block;max-width:94vw;max-height:88vh}
+#dlg .dl{position:absolute;right:10px;bottom:8px;font-size:11px;color:#bbb;opacity:.7;text-decoration:none;padding:2px 8px;border:1px solid #555;border-radius:10px;background:rgba(0,0,0,.4)}
+#dlg .dl:hover,#dlg .dl:focus-visible{opacity:1;color:#fff;border-color:#999}
+#dlg .dl[hidden]{display:none}
 #dlg p{margin:0;padding:8px 12px;color:#ddd;font-size:13px;background:#111}
 dialog.panel{width:100vw;height:100vh;max-width:100vw;max-height:100vh;margin:0;padding:0;background:var(--bg);color:var(--ink);border:0;position:fixed;inset:0}
 dialog.panel::backdrop{background:rgba(0,0,0,.7)}
@@ -94,7 +97,7 @@ tbody th.name:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
 </header>
 <div class="bar"><input id="q" type="search" placeholder="Filtrar por estilo, mestre ou característica" aria-label="Filtrar estilos"><span id="cnt"></span><label class="sw"><input id="sw-prompts" type="checkbox" role="switch" checked><span class="trk"></span><span>Mostrar prompts</span></label></div>
 <div class="wrap"><table id="tbl"></table></div>
-<dialog id="dlg"><img alt=""><p></p></dialog>
+<dialog id="dlg"><img alt=""><p></p><a class="dl" download>baixar original</a></dialog>
 <dialog id="sp" class="panel"><button class="sp-close" aria-label="Fechar">✕</button><div class="sp-body"><div class="sp-left" id="spLeft"></div><div class="sp-right" id="spRight"></div></div></dialog>
 <script>
 /* Dados: edite o texto aqui. As imagens são atualizadas por atualizar-imagens.py (não altere os marcadores). */
@@ -118,13 +121,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os impressionistas pintavam ao ar livre (en plein air) para registrar rapidamente as mudanças de luz, aplicando pinceladas curtas, soltas e visíveis que o olho do espectador funde a distância. Preferiam cores puras justapostas diretamente na tela, em vez de misturadas na paleta, e evitavam o chiaroscuro tradicional, sugerindo volume e distância por meio de variações de cor e tom. As sombras eram pintadas com tons coloridos — azuis, violetas — em vez de preto, e os contornos se dissolviam em manchas de tinta. Essa técnica resultava em superfícies vibrantes e texturizadas que privilegiavam a sensação momentânea sobre o detalhe descritivo.",
   "geral": {
    "prompt": "Rain-slicked Parisian boulevard at dusk, gas lamps dissolving into broken dabs of orange and violet, hurried visible brushstrokes, no outlines, colored shadows, crowd reduced to flickering touches of paint, fleeting light and the ache of a passing moment",
-   "gpt": "img/geral-Impressionismo-gpt.png",
-   "gemini": "img/geral-Impressionismo-gemini.jpeg"
+   "gpt": "img/geral-Impressionismo-gpt.webp",
+   "gemini": "img/geral-Impressionismo-gemini.webp",
+   "gpt_original": "originais/geral-Impressionismo-gpt.png",
+   "gemini_original": "originais/geral-Impressionismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, impressionism style, vibrant loose brushstrokes, soft natural light, dabs of color",
-   "gpt": "img/mulhercomflores-Impressionismo-gpt.png",
-   "gemini": "img/mulhercomflores-Impressionismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Impressionismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Impressionismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Impressionismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Impressionismo-gemini.jpeg"
   }
  },
  {
@@ -147,13 +154,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Cada artista desenvolveu uma técnica própria dentro de um núcleo comum de pinceladas espessas e direcionais. Cézanne reduzia objetos a formas básicas (cilindros, esferas, cones) mantendo as cores vivas herdadas do impressionismo. Van Gogh aplicava tinta em camadas grossas (impasto), por vezes quase esculpindo a superfície da tela com pinceladas giratórias e intensas. Seurat construía a imagem com milhares de pontos de cor pura, confiando na mistura óptica do olho humano. Em comum, o grupo valorizava cores saturadas, contornos mais marcados e estrutura formal mais deliberada que a observação impressionista.",
   "geral": {
    "prompt": "A cypress and a sleepless village under a turbulent night sky, thick impasto ridges of ultramarine and cadmium yellow, spiraling directional brushstrokes, loaded palette-knife marks, raw trembling emotion in every stroke",
-   "gpt": "img/geral-Pós-Impressionismo-gpt.png",
-   "gemini": "img/geral-Pós-Impressionismo-gemini.jpeg"
+   "gpt": "img/geral-Pós-Impressionismo-gpt.webp",
+   "gemini": "img/geral-Pós-Impressionismo-gemini.webp",
+   "gpt_original": "originais/geral-Pós-Impressionismo-gpt.png",
+   "gemini_original": "originais/geral-Pós-Impressionismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, post-impressionism style, thick impasto paint texture, swirling emotional brushwork, bold expressive colors",
-   "gpt": "img/mulhercomflores-Pós-Impressionismo-gpt.png",
-   "gemini": "img/mulhercomflores-posImpressionismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Pós-Impressionismo-gpt.webp",
+   "gemini": "img/mulhercomflores-posImpressionismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Pós-Impressionismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-posImpressionismo-gemini.jpeg"
   }
  },
  {
@@ -175,13 +186,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os surrealistas recorriam a métodos de criação que driblavam o controle consciente, como o 'cadáver esquisito' — um desenho ou texto coletivo construído por etapas ocultas entre os participantes. Na pintura, Dalí e Magritte favoreciam uma renderização hiper-realista e quase fotográfica, que tornava as cenas impossíveis ainda mais perturbadoras por parecerem reais. São marcas do estilo a justaposição de elementos sem relação lógica entre si, escalas e perspectivas distorcidas, objetos cotidianos deslocados de contexto e uma atmosfera onírica de silêncio e estranhamento.",
   "geral": {
    "prompt": "Endless amber desert at twilight, a soft pocket watch draped over a dead tree, elongated shadows stretching impossibly, a lone crutch-propped figure, hyper-smooth academic oil rendering of an illogical dream, silent unease and longing",
-   "gpt": "img/geral-Surrealismo-gpt.png",
-   "gemini": "img/geral-Surrealismo-gemini.jpeg"
+   "gpt": "img/geral-Surrealismo-gpt.webp",
+   "gemini": "img/geral-Surrealismo-gemini.webp",
+   "gpt_original": "originais/geral-Surrealismo-gpt.png",
+   "gemini_original": "originais/geral-Surrealismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant surrealist portrait of a young blonde woman holding a vase, flowers of lilac, red, and yellow melting into butterflies, dreamlike atmosphere, Dali style, floating elements",
-   "gpt": "img/mulhercomflores-Surrealismo-gpt.png",
-   "gemini": "img/mulhercomflores-Surrealismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Surrealismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Surrealismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Surrealismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Surrealismo-gemini.jpeg"
   }
  },
  {
@@ -202,13 +217,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "No cubismo analítico, o objeto é 'analisado' e reconstruído a partir de múltiplos pontos de vista simultâneos, criando planos rasos e sobrepostos que negam a perspectiva tradicional de um único ponto de fuga. A paleta é restrita e neutra, para que a atenção recaia sobre a estrutura das formas, não sobre a cor. No cubismo sintético, a composição se torna mais plana e os objetos são sugeridos por formas geométricas simplificadas e por materiais colados — jornal, papel de parede, palha —, antecipando a colagem moderna.",
   "geral": {
    "prompt": "A guitarist deconstructed into overlapping angular facets, seen from front and profile at once, muted ochre, umber and grey palette, flattened space, collaged newsprint fragments, analytic cubism with austere, melancholy rhythm",
-   "gpt": "img/geral-Cubismo-gpt.png",
-   "gemini": "img/geral-Cubismo-gemini.jpeg"
+   "gpt": "img/geral-Cubismo-gpt.webp",
+   "gemini": "img/geral-Cubismo-gemini.webp",
+   "gpt_original": "originais/geral-Cubismo-gpt.png",
+   "gemini_original": "originais/geral-Cubismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant cubist portrait of a young blonde woman holding a jar, fragmented geometric planes, lilac, red, and yellow flowers deconstructed into abstract shapes, multi-perspective",
-   "gpt": "img/mulhercomflores-Cubismo-gpt.png",
-   "gemini": "img/mulhercomflores-Cubismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Cubismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Cubismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Cubismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Cubismo-gemini.jpeg"
   }
  },
  {
@@ -230,13 +249,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Caravaggio foi pioneiro do tenebrismo, uma forma extrema de chiaroscuro em que a luz incide sobre a cena como um foco teatral isolado, mergulhando o restante da composição em sombras profundas. Essa técnica cria um efeito dramático de revelação, guiando o olhar do espectador diretamente ao ponto de tensão emocional da cena. As composições barrocas privilegiam diagonais dinâmicas em vez de simetrias estáticas, texturas ricas de tecidos e metais, e um realismo cru das figuras, em oposição à idealização clássica anterior.",
   "geral": {
    "prompt": "A single shaft of candlelight cutting through absolute darkness, tenebrism, deep crimson velvet and tarnished gold, theatrical gesture frozen mid-motion, rich oil impasto on highlights, raw drama and sacred intensity",
-   "gpt": "img/geral-Barroco-gpt.png",
-   "gemini": "img/geral-Barroco-gemini.jpeg"
+   "gpt": "img/geral-Barroco-gpt.webp",
+   "gemini": "img/geral-Barroco-gemini.webp",
+   "gpt_original": "originais/geral-Barroco-gpt.png",
+   "gemini_original": "originais/geral-Barroco-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant baroque portrait of a young blonde woman holding a jar with lilac, red, and yellow flowers, dramatic chiaroscuro, intense shadows, deep rich colors, textures of oil painting, masterwork",
-   "gpt": "img/mulhercomflores-Barroco-gpt.png",
-   "gemini": "img/mulhercomflores-Barroco-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Barroco-gpt.webp",
+   "gemini": "img/mulhercomflores-Barroco-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Barroco-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Barroco-gemini.jpeg"
   }
  },
  {
@@ -258,13 +281,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A perspectiva linear organiza a composição em torno de um ponto de fuga único, fazendo linhas paralelas convergirem no horizonte e criando a ilusão de profundidade real. Leonardo da Vinci aperfeiçoou o sfumato, técnica de transições tonais tão suaves que dissolve contornos e bordas nítidas, como se as formas se formassem a partir de fumaça. As composições buscam equilíbrio e simetria matemática, muitas vezes organizadas segundo proporções áureas, com anatomia estudada a partir de dissecações e observação direta do corpo humano.",
   "geral": {
    "prompt": "Serene Tuscan hillside receding into hazy blue distance, one-point linear perspective, sfumato softness without hard edges, balanced pyramidal composition, warm glazed oil layers, quiet dignity and ideal harmony",
-   "gpt": "img/geral-Renascimento-gpt.png",
-   "gemini": "img/geral-Renascimento-gemini.jpeg"
+   "gpt": "img/geral-Renascimento-gpt.webp",
+   "gemini": "img/geral-Renascimento-gemini.webp",
+   "gpt_original": "originais/geral-Renascimento-gpt.png",
+   "gemini_original": "originais/geral-Renascimento-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant renaissance portrait of a young blonde woman holding a classical jar filled with lilac, red, and yellow flowers, smooth sfumato, soft shadows, Leonardo da Vinci style, harmonious composition",
-   "gpt": "img/mulhercomflores-Renascimento-gpt.png",
-   "gemini": "img/mulhercomflores-Renascimento-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Renascimento-gpt.webp",
+   "gemini": "img/mulhercomflores-Renascimento-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Renascimento-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Renascimento-gemini.jpeg"
   }
  },
  {
@@ -286,13 +313,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O estilo de Die Brücke se apoiava em cores contrastantes e quase brutais, linhas angulares e um desenho deliberadamente simplificado e 'primitivo', herdado da xilogravura. Der Blaue Reiter, por sua vez, explorava formas abstratas, simbolismo e cores vibrantes para sugerir estados espirituais e emocionais. Em ambos os casos, a representação fiel da realidade é sacrificada em favor da distorção expressiva de formas e perspectivas, com pinceladas agitadas e contornos grosseiros que transmitem angústia, tensão e intensidade emocional direta.",
   "geral": {
    "prompt": "A figure screaming on a bridge beneath a blood-orange sky, undulating distorted lines, acid greens and violent reds, coarse aggressive brushwork, faces like masks, anxiety turned into color and form",
-   "gpt": "img/geral-Expressionismo-gpt.png",
-   "gemini": "img/geral-Expressionismo-gemini.jpeg"
+   "gpt": "img/geral-Expressionismo-gpt.webp",
+   "gemini": "img/geral-Expressionismo-gemini.webp",
+   "gpt_original": "originais/geral-Expressionismo-gpt.png",
+   "gemini_original": "originais/geral-Expressionismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant yet moody expressionist portrait of a young blonde woman holding a jar with lilac, red, and yellow flowers, bold distorted brushstrokes, intense subjective colors, emotional depth",
-   "gpt": "img/mulhercomflores-Expressionismo-gpt.png",
-   "gemini": "img/mulhercomflores-Expressionismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Expressionismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Expressionismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Expressionismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Expressionismo-gemini.jpeg"
   }
  },
  {
@@ -314,13 +345,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Courbet construía suas telas com pinceladas robustas e uso frequente da espátula, criando superfícies espessas e texturizadas. Sua paleta terrosa e sóbria evitava o brilho idealizado do romantismo, priorizando tons que refletiam a aspereza da vida real observada diretamente. As composições evitam qualquer heroísmo ou idealização dos sujeitos retratados, valorizando a observação minuciosa da luz natural e da anatomia tal como se apresentam, sem embelezamento.",
   "geral": {
    "prompt": "A weary laborer resting at the edge of a wheat field at noon, honest unidealized face, sweat and dust on worn cloth, flat overcast daylight, earthy muted palette, dignified stillness and quiet fatigue",
-   "gpt": "img/geral-Realismo-gpt.png",
-   "gemini": "img/geral-Realismo-gemini.jpeg"
+   "gpt": "img/geral-Realismo-gpt.webp",
+   "gemini": "img/geral-Realismo-gemini.webp",
+   "gpt_original": "originais/geral-Realismo-gpt.png",
+   "gemini_original": "originais/geral-Realismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant realism painting of a young blonde woman holding a jar with lilac, red, and yellow flowers, highly detailed, precise textures of fabric and petals, natural direct lighting, fine art",
-   "gpt": "img/mulhercomflores-Realismo-gpt.png",
-   "gemini": "img/mulhercomflores-Realismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Realismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Realismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Realismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Realismo-gemini.jpeg"
   }
  },
  {
@@ -341,13 +376,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "As xilogravuras ukiyo-e se caracterizam por contornos de linha preta forte e definida, que delimitam áreas de cor aplicadas de forma chapada, sem gradações ou sombreamento volumétrico. A produção de uma imagem colorida exigia um bloco de madeira entalhado separadamente para cada cor, impressos em sequência precisa sobre o papel. As composições costumam adotar enquadramentos ousados e assimétricos, com perspectivas elevadas e cortes inesperados que mais tarde inspirariam o 'japonismo' na arte ocidental.",
   "geral": {
    "prompt": "A towering curling wave with claw-like foam about to crash over small boats, Mount Fuji tiny in the distance, firm sumi outlines, flat areas of Prussian blue and cream, visible woodgrain, bokashi gradient sky, awe before nature's power",
-   "gpt": "img/geral-Ukiyo-e-gpt.png",
-   "gemini": "img/geral-Ukiyo-e-gemini.jpeg"
+   "gpt": "img/geral-Ukiyo-e-gpt.webp",
+   "gemini": "img/geral-Ukiyo-e-gemini.webp",
+   "gpt_original": "originais/geral-Ukiyo-e-gpt.png",
+   "gemini_original": "originais/geral-Ukiyo-e-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant ukiyo-e style woodblock print portrait of a young blonde woman holding a jar with lilac, red, and yellow flowers, bold clean outlines, flat decorative colors, traditional Japanese aesthetic",
-   "gpt": "img/mulhercomflores-Ukiyo-e-gpt.png",
-   "gemini": "img/mulhercomflores-Ukiyo-e-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Ukiyo-e-gpt.webp",
+   "gemini": "img/mulhercomflores-Ukiyo-e-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Ukiyo-e-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Ukiyo-e-gemini.jpeg"
   }
  },
  {
@@ -369,13 +408,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A marca registrada do estilo é a 'linha chicote': uma curva assimétrica e sinuosa, inspirada em caules de plantas ou mechas de cabelo, que ganha impulso e se enrola sobre si mesma. Flores e insetos — lírios, íris, libélulas, pavões — eram sempre estilizados em padrão decorativo, nunca reproduzidos com exatidão botânica. O movimento também explorava materiais modernos como ferro forjado, vidro e cerâmica, em composições ornamentais simétricas ou espiraladas que transmitiam sensação de dinamismo e crescimento orgânico.",
   "geral": {
    "prompt": "A maiden framed by a circular halo of whiplash vines and lilies, sinuous flowing hair becoming ornament, flat muted pastels with gilded accents, bold contour lines, decorative lettering panel, poetic sensual calm",
-   "gpt": "img/geral-Art Nouveau-gpt.png",
-   "gemini": "img/geral-Art Nouveau-gemini.jpeg"
+   "gpt": "img/geral-Art Nouveau-gpt.webp",
+   "gemini": "img/geral-Art Nouveau-gemini.webp",
+   "gpt_original": "originais/geral-Art Nouveau-gpt.png",
+   "gemini_original": "originais/geral-Art Nouveau-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant Art Nouveau portrait of a young blonde woman holding a jar, flowing lilac, red, and yellow flowers, intricate organic lines, Alphonse Mucha style, gold leaf accents, decorative borders",
-   "gpt": "img/mulhercomflores-Art Nouveau-gpt.png",
-   "gemini": "img/mulhercomflores-Art Nouveau-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Art Nouveau-gpt.webp",
+   "gemini": "img/mulhercomflores-Art Nouveau-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Art Nouveau-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Art Nouveau-gemini.jpeg"
   }
  },
  {
@@ -397,13 +440,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Diferente das curvas naturais do Art Nouveau, o Art Déco adota linhas retas, simetria e geometria angular — formas mais fáceis de reproduzir em produção industrial e em massa. A estética combina materiais manufaturados (cromo, plástico, vidro) com materiais nobres (marfim, prata, jade), em padrões repetitivos e escalonados. A paleta de cores metálicas e contrastantes — dourado, preto, prata — reforça a sensação de luxo, modernidade e sofisticação urbana.",
   "geral": {
    "prompt": "A grand hotel lobby of stepped chevrons and radiating sunbursts, perfect mirror symmetry, black lacquer, polished brass and gold inlay, hard-edged streamlined forms, cold glamour and confident modernity",
-   "gpt": "img/geral-Art Déco-gpt.png",
-   "gemini": "img/geral-Art Déco-gemini.jpeg"
+   "gpt": "img/geral-Art Déco-gpt.webp",
+   "gemini": "img/geral-Art Déco-gemini.webp",
+   "gpt_original": "originais/geral-Art Déco-gpt.png",
+   "gemini_original": "originais/geral-Art Déco-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant Art Deco portrait of a young blonde woman holding a sleek geometric jar with lilac, red, and yellow flowers, symmetrical patterns, 1920s glamorous style, gold and sharp contrast accents",
-   "gpt": "img/mulhercomflores-Art Déco-gpt.png",
-   "gemini": "img/mulhercomflores-Art Déco-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Art Déco-gpt.webp",
+   "gemini": "img/mulhercomflores-Art Déco-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Art Déco-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Art Déco-gemini.jpeg"
   }
  },
  {
@@ -424,13 +471,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os mosaicos eram compostos por tesselas — pequenas peças de vidro ou pedra — e, para o fundo dourado, usava-se uma técnica específica: uma fina folha de ouro era aplicada a frio sobre uma placa de vidro, coberta por uma camada de vidro em pó e depois levada ao forno. As tesselas douradas eram posicionadas em ângulos levemente variados entre si, de modo a refletir a luz ambiente de maneira cintilante e irregular. As figuras humanas eram representadas de frente, alongadas e estáticas, destacando-se contra o fundo dourado plano sem qualquer sugestão de profundidade espacial.",
   "geral": {
    "prompt": "A frontal solemn emperor with a gold halo, thousands of tiny irregular glass tesserae on a shimmering gold ground, visible grout lines, flat hieratic figures with huge unblinking eyes, no perspective, timeless sacred stillness",
-   "gpt": "img/geral-Arte Bizantina-gpt.png",
-   "gemini": "img/geral-Arte Bizantina-gemini.jpeg"
+   "gpt": "img/geral-Arte Bizantina-gpt.webp",
+   "gemini": "img/geral-Arte Bizantina-gemini.webp",
+   "gpt_original": "originais/geral-Arte Bizantina-gpt.png",
+   "gemini_original": "originais/geral-Arte Bizantina-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant Byzantine mosaic portrait of a young blonde woman holding a jar with lilac, red, and yellow flowers, intricate small glass tiles, heavy golden grout accents, religious icon aesthetic",
-   "gpt": "img/mulhercomflores-Arte Bizantina-gpt.png",
-   "gemini": "img/mulhercomflores-Arte Bizantina-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Arte Bizantina-gpt.webp",
+   "gemini": "img/mulhercomflores-Arte Bizantina-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Arte Bizantina-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Arte Bizantina-gemini.jpeg"
   }
  },
  {
@@ -452,13 +503,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A pintura romântica prefere composições dramáticas, com diagonais, grandes massas de nuvens e contrastes fortes entre luz e escuridão. A pincelada é mais solta e a cor mais intensa e quente que no neoclássico, com atmosferas de névoa, tempestade ou luar. As figuras humanas costumam ser pequenas diante da paisagem, para evocar o sublime. Turner usava veladuras translúcidas de óleo e aquarela para criar luz vaporosa, enquanto Delacroix aplicava cores complementares lado a lado para dar vibração à cena.",
   "geral": {
    "prompt": "Lone wanderer on a jagged cliff above a sea of fog at dawn, storm clouds tearing open to let in shafts of golden light, ruined gothic abbey in the distance, small figure against the vast sublime, dramatic diagonal composition, rich oil glazes, awe and melancholy",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Romantismo-gpt.webp",
+   "gemini": "img/geral-Romantismo-gemini.webp",
+   "gpt_original": "originais/geral-Romantismo-gpt.png",
+   "gemini_original": "originais/geral-Romantismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, romanticism oil painting style, stormy sublime sky behind her, dramatic light breaking through clouds, windswept hair, rich saturated colors, emotional atmosphere",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Romantismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Romantismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Romantismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Romantismo-gemini.jpeg"
   }
  },
  {
@@ -480,13 +535,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Paleta clara de rosa, azul-celeste, verde-menta, creme e dourado, com pinceladas macias e luminosas. As composições são assimétricas, cheias de curvas em S, laços, folhagens e nuvens. Os temas são amorosos e festivos, com vestidos de seda e cetim pintados com brilho e transparência. A atmosfera é teatral e irreverente, e a sensação de movimento vem de panejamentos esvoaçantes. O desenho conserva uma delicadeza quase de porcelana, com figuras graciosas e pequenas dentro de paisagens decorativas.",
   "geral": {
    "prompt": "Pastel-colored garden party under billowing trees, a young aristocrat on a rope swing among clouds of silk petticoats, cherubs and rose garlands, curling gilded ornament frames the scene, feathery brushwork in peach, mint and powder blue, playful and flirtatious mood",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Rococó-gpt.webp",
+   "gemini": "img/geral-Rococó-gemini.webp",
+   "gpt_original": "originais/geral-Rococó-gpt.png",
+   "gemini_original": "originais/geral-Rococó-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, rococo painting style, pastel pink and powder blue silk dress, ornate gilded curves, soft feathery brushwork, flirtatious garden setting, cherubs and rose garlands",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Rococó-gpt.webp",
+   "gemini": "img/mulhercomflores-Rococó-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Rococó-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Rococó-gemini.jpeg"
   }
  },
  {
@@ -508,13 +567,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O desenho domina a cor: contornos nítidos, superfícies lisas e pinceladas quase invisíveis, sem marcas de pincel. As figuras têm anatomia idealizada e poses de escultura, dispostas em frisos ou em triângulos estáveis. A luz é clara e uniforme, com sombras bem definidas, e a paleta é sóbria, com vermelhos, azuis e brancos fortes. Cenários trazem colunas, togas, drapeados e mármore. O resultado é uma imagem fria, ordenada e solene, que parece congelada num instante heroico.",
   "geral": {
    "prompt": "Heroic scene in a Roman atrium, figures in white togas posed like sculptures around a stone altar, sharp clean contours, cold even light, strict triangular composition, polished enamel-smooth surfaces with no visible brushstrokes, solemn civic virtue",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Neoclassicismo-gpt.webp",
+   "gemini": "img/geral-Neoclassicismo-gemini.webp",
+   "gpt_original": "originais/geral-Neoclassicismo-gpt.png",
+   "gemini_original": "originais/geral-Neoclassicismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, neoclassical painting style, white Grecian drapery, marble column background, crisp smooth contours, cool even light, statuesque calm pose, polished surface",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Neoclassicismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Neoclassicismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Neoclassicismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Neoclassicismo-gemini.jpeg"
   }
  },
  {
@@ -536,13 +599,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A superfície é construída com pequenos pontos ou toques de cor pura, aplicados lado a lado sem mistura na paleta. À distância, o olho do espectador funde os pontos e percebe tons mais luminosos e vibrantes do que os obtidos por mistura de tintas (mistura óptica). As cores complementares são colocadas lado a lado para intensificar a luz. As formas são simplificadas e quase imóveis, com contornos suaves e uma sensação de silêncio. É um trabalho lento, que exige planejamento da composição e disciplina de pincel.",
   "geral": {
    "prompt": "Sunday afternoon on a river bank, stiff silhouetted figures with parasols beneath tall trees, entire scene built from tiny dots of pure complementary color, optical mixing, shimmering light, quiet geometric stillness",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Pontilhismo-gpt.webp",
+   "gemini": "img/geral-Pontilhismo-gemini.webp",
+   "gpt_original": "originais/geral-Pontilhismo-gpt.png",
+   "gemini_original": "originais/geral-Pontilhismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, pointillism style, image built from thousands of tiny dots of pure color, optical color mixing, luminous complementary hues, Seurat-like stillness",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Pontilhismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Pontilhismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Pontilhismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Pontilhismo-gemini.jpeg"
   }
  },
  {
@@ -564,13 +631,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Há duas vertentes. Na 'action painting', o artista gesticula com o corpo inteiro e usa pinceladas largas, respingos, gotejamento (dripping) e espátulas, sem ponto focal único (all-over). No 'color field', camadas finas de tinta formam grandes retângulos de cor, com bordas suaves e luminosas, que envolvem o olhar. As telas são enormes para absorver o espectador. A composição nasce do processo, com camadas, acidentes e arrependimentos visíveis, e o resultado transmite energia ou silêncio sem representar objetos.",
   "geral": {
    "prompt": "Monumental canvas covered in violent gestural drips and splatters of black, white and ochre enamel, tangled all-over rhythm without a focal point, thick palette-knife slashes, raw energy of the painter's whole body",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Expressionismo Abstrato-gpt.webp",
+   "gemini": "img/geral-Expressionismo Abstrato-gemini.webp",
+   "gpt_original": "originais/geral-Expressionismo Abstrato-gpt.png",
+   "gemini_original": "originais/geral-Expressionismo Abstrato-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, abstract expressionism style, face and flowers dissolved into gestural paint drips and bold slashes of color, raw painterly energy, large energetic brushwork",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Expressionismo Abstrato-gpt.webp",
+   "gemini": "img/mulhercomflores-Expressionismo Abstrato-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Expressionismo Abstrato-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Expressionismo Abstrato-gemini.jpeg"
   }
  },
  {
@@ -592,13 +663,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os pigmentos vinham de minerais e carvão: óxidos de ferro para vermelhos e amarelos, carvão e manganês para pretos. Eram aplicados com os dedos, pincéis de pelo ou penas, ou soprados por ossos ocos para criar silhuetas de mãos em negativo. Os artistas aproveitavam saliências e rachaduras da rocha para sugerir volume e movimento, e pintavam à luz de lamparinas de gordura animal. Os animais são representados com contornos sintéticos e cheios de vida, em escala variada, sem chão nem perspectiva.",
   "geral": {
    "prompt": "Torchlit limestone cave wall, herd of galloping bison and horses painted in red ochre and black charcoal, contours following the natural bulges of the rock, stenciled hand prints blown in pigment, rough mineral texture, ancient and mysterious",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Arte Rupestre-gpt.webp",
+   "gemini": "img/geral-Arte Rupestre-gemini.webp",
+   "gpt_original": "originais/geral-Arte Rupestre-gpt.png",
+   "gemini_original": "originais/geral-Arte Rupestre-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, prehistoric cave painting style on rough limestone wall, woman and flowers rendered as ochre and charcoal silhouettes, stenciled hand prints around, torchlit mineral texture",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Arte Rupestre-gpt.webp",
+   "gemini": "img/mulhercomflores-Arte Rupestre-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Arte Rupestre-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Arte Rupestre-gemini.jpeg"
   }
  },
  {
@@ -620,13 +695,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A imagem segue um cânone: cabeça de perfil, olho e ombros de frente, quadris e pernas de perfil, num arranjo que mostra cada parte do corpo em seu ângulo mais reconhecível. O tamanho indica importância (faraós e deuses são maiores) e as figuras ficam em registros horizontais separados por linhas, junto a hieróglifos. Cores simbólicas vinham de minerais: azul egípcio, verde malaquita, ocre vermelho e amarelo, branco e ouro. Os contornos são limpos e as superfícies, chapadas, sem sombra nem perspectiva.",
   "geral": {
    "prompt": "Tomb wall in registers: pharaoh and goddess in strict profile with frontal eye and shoulders, rows of hieroglyphs, flat mineral pigments in Egyptian blue, malachite green, red ochre and gold on plaster, clean black outlines, hierarchical scale, eternal calm",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Arte Egípcia-gpt.webp",
+   "gemini": "img/geral-Arte Egípcia-gemini.webp",
+   "gpt_original": "originais/geral-Arte Egípcia-gpt.png",
+   "gemini_original": "originais/geral-Arte Egípcia-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, ancient Egyptian wall painting style, profile pose with frontal eye and shoulders, hieroglyph border, flat mineral pigments of turquoise, ochre and gold, black outlines, lotus flowers in the vase",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Arte Egípcia-gpt.webp",
+   "gemini": "img/mulhercomflores-Arte Egípcia-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Arte Egípcia-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Arte Egípcia-gemini.jpeg"
   }
  },
  {
@@ -648,13 +727,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Murais e códices usam contornos precisos em preto ou vermelho preenchidos com cores chapadas, como azul maia (pigmento resistente feito com índigo e argila), vermelho de cinabre e amarelo ocre. As figuras aparecem de perfil, com tocados enormes de penas de quetzal, jade e glifos entrelaçados. Nos relevos de pedra, predominam formas geométricas densas, serpentes, jaguares e rostos de divindades. A composição é cheia, com pouco espaço vazio, e o simbolismo (calendário, sacrifício, cosmos) prevalece sobre a perspectiva.",
   "geral": {
    "prompt": "Temple mural of a Maya ruler in profile wearing a towering quetzal-feather headdress and jade ornaments, bands of glyphs, jaguar pelt, flat saturated Maya blue, cinnabar red and ochre with bold outlines, dense ceremonial composition, carved stone relief details",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Arte Maia-gpt.webp",
+   "gemini": "img/geral-Arte Maia-gemini.webp",
+   "gpt_original": "originais/geral-Arte Maia-gpt.png",
+   "gemini_original": "originais/geral-Arte Maia-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, ancient Mesoamerican Maya mural style, profile pose, towering quetzal-feather headdress, Maya blue and cinnabar red, glyph borders, bold outlines, flat ceremonial composition",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Arte Maia-gpt.webp",
+   "gemini": "img/mulhercomflores-Arte Maia-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Arte Maia-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Arte Maia-gemini.jpeg"
   }
  },
  {
@@ -676,13 +759,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os pontos de acrílico são aplicados com pontas de pau ou pincéis sobre fundos de cor terrosa, formando padrões de círculos concêntricos (locais de água ou acampamento), linhas em U (pessoas sentadas) e caminhos. O trabalho é visto de cima, como mapa. As cores vêm da paisagem: ocres vermelho e amarelo, brancos, pretos e, mais recentemente, tons vivos. No norte, pintores de Arnhem Land usam casca de árvore e o estilo 'raio-X', que mostra os órgãos internos dos animais. A repetição de pontos cria vibração e movimento.",
   "geral": {
    "prompt": "Aerial view of desert country as a sacred map, concentric circles of tiny dots, winding dotted pathways and U-shaped symbols, earthy ochre red, yellow and white on dark ground, hypnotic rhythmic repetition, flat acrylic dot painting",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Arte Aborígene-gpt.webp",
+   "gemini": "img/geral-Arte Aborígene-gemini.webp",
+   "gpt_original": "originais/geral-Arte Aborígene-gpt.png",
+   "gemini_original": "originais/geral-Arte Aborígene-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, Australian Aboriginal dot painting style, figure and flowers built from concentric circles and rows of tiny dots, earthy ochre, red and white palette, winding dotted paths, flat symbolic composition",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Arte Aborígene-gpt.webp",
+   "gemini": "img/mulhercomflores-Arte Aborígene-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Arte Aborígene-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Arte Aborígene-gemini.jpeg"
   }
  },
  {
@@ -704,13 +791,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A tinta preta é feita esfregando um bastão de nanquim em pedra com água, e diferentes diluições dão uma gama de cinzas. O pincel de pelo de cabra ou lobo, sobre papel de arroz ou seda, produz traços que vão do fio fino à mancha larga. O princípio 'qi yun sheng dong' (ressonância de espírito, movimento da vida) vale mais que a semelhança. O vazio (liubai) sugere névoa, água e céu. Guo Xi descreveu três distâncias: alta, profunda e plana. As cores, quando aparecem, são mínimas.",
   "geral": {
    "prompt": "Towering misty mountains and a thin waterfall in monochrome ink wash, tiny scholar's hut and a lone traveler on a path, vast empty space as mist, expressive brush strokes from dry to wet black, handscroll on aged silk, quiet meditative poetry",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/geral-Pintura Chinesa Shan Shui-gpt.webp",
+   "gemini": "img/geral-Pintura Chinesa Shan Shui-gemini.webp",
+   "gpt_original": "originais/geral-Pintura Chinesa Shan Shui-gpt.png",
+   "gemini_original": "originais/geral-Pintura Chinesa Shan Shui-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, traditional Chinese ink wash painting, woman as a delicate brush figure, flowers rendered with a few expressive strokes, misty mountains in the background, vast empty space, rice paper texture, red seal stamp",
-   "gpt": null,
-   "gemini": null
+   "gpt": "img/mulhercomflores-Pintura Chinesa Shan Shui-gpt.webp",
+   "gemini": "img/mulhercomflores-Pintura Chinesa Shan Shui-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Pintura Chinesa Shan Shui-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Pintura Chinesa Shan Shui-gemini.jpeg"
   }
  },
  {
@@ -733,12 +824,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Court garden scene seen from a raised viewpoint, elegant princes and ladies amid flowering cypress and plane trees, tiled pavilion with arabesque patterns, jewel tones of lapis blue, vermilion and gold leaf, ornamental calligraphy border, flat opaque gouache, minutely detailed",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, Persian Mughal miniature painting style, tiny delicate brushwork, jewel tones of lapis blue and vermilion, gold leaf details, ornate floral border with calligraphy, flat decorative perspective, garden background",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -761,12 +856,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Large blue-and-white tile panel of a baroque courtyard scene with elegant figures and ships, cobalt blue brushwork on glossy white tin glaze, visible grid of square ceramic tiles, ornate scrolling frame with shells and cherubs, craquelure of old kiln firing",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, traditional Portuguese azulejo tile style, portrait painted in cobalt blue on white glazed ceramic tiles, visible tile grid, baroque scroll frame, glossy craquelure, floral motifs",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -789,12 +888,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Interior dome and wall covered with interlaced eight- and twelve-pointed stars, endless tessellation, zellige tile mosaic in turquoise, cobalt blue, emerald and gold, carved stucco arabesques with vine scrolls and calligraphic band, perfect radial symmetry",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, Islamic geometric art style, face framed by interlaced star patterns and arabesque vines, turquoise, cobalt and gold tiles, perfect radial symmetry, calligraphic border, flowers as ornamental motifs",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -817,12 +920,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Classical oil painting on stretched canvas of a quiet interior still life with a velvet drape and a brass vessel, warm glazes layered from dark to light, visible bristle strokes and impasto highlights, rich burnt umber and ochre, soft chiaroscuro, varnished depth",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, classical oil painting on canvas, thick impasto highlights, glazed luminous skin tones, visible bristle brushwork, rich warm palette, varnished museum quality",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -845,12 +952,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Poster-like gouache illustration of a hillside village at golden hour, flat opaque color shapes with crisp edges, saturated coral, teal and mustard, matte velvety finish, simplified stylized trees and rooftops, mid-century concept art charm",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, gouache and acrylic illustration style, flat opaque saturated color shapes, matte finish, crisp edges, simplified stylized forms, mid-century poster look",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -873,12 +984,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Detailed graphite pencil drawing on white cotton paper of an old craftsman's hands holding a pocket watch, fine parallel hatching and cross-hatching, smudged soft gradients, silvery metallic sheen in the darks, light construction lines still visible, no color",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, graphite pencil drawing on white paper, fine hatching and cross-hatching, soft smudged gradients, silvery grey tones, visible construction lines, monochrome",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -901,12 +1016,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Black ink illustration of a gothic cathedral street at night, crisp pen outlines, dense cross-hatching and stippling for shadows, bold solid black masses against bare white paper, flowing varied line weight, no gray tones, dramatic high contrast",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, black ink pen illustration, dense cross-hatching and stippling, bold solid black shadows, flowing line weight, high contrast on white paper, art nouveau decorative linework",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -929,12 +1048,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Loose urban sketchbook page of a sunlit café street, quick confident ink line with visible gesture, wobbly perspective guides, a few washes of watercolor dropped outside the lines, handwritten margin notes, unfinished spontaneous charm on cream paper",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, fashion croquis sketch, elongated elegant figure, quick confident ink lines, loose marker and watercolor washes, visible construction lines, unfinished spontaneous look on white paper",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -957,12 +1080,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Splash page of a masked hero leaping through a rain-soaked city, extreme foreshortening, bold black ink outlines and heavy spotted blacks, flat four-color palette with Ben-Day halftone dots, jagged energy crackle, action lines and a giant onomatopoeia",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, American comic book cover style, bold black ink outlines, flat four-color palette with Ben-Day halftone dots, dramatic foreshortening, dynamic heroic pose, action lines",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -985,12 +1112,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Newspaper editorial cartoon of a pompous politician with an enormous head and tiny body trampling a mountain of paperwork, exaggerated nose and chin, loose wobbly ink lines, flat watercolor wash, witty satirical energy, speech bubble",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, caricature drawing style, exaggerated oversized head and big expressive eyes, tiny body, wobbly ink lines, playful flat watercolor wash, satirical humor, huge bouquet",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1013,12 +1144,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Intaglio etching of an imaginary baroque prison hall with endless staircases and arches, dense fine cross-hatching, deep velvety blacks, razor-thin incised lines, plate mark and cream laid paper, sepia-black ink on antique paper",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, intaglio etching and engraving style, dense fine cross-hatching, razor-thin incised lines, deep velvety blacks, plate mark on cream antique paper, flowers drawn in meticulous detail",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1041,12 +1176,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Hand-painted countryside summer afternoon, towering cumulus clouds in a deep blue sky, rolling green hills and a tiny steam train crossing a wooden bridge, soft gouache watercolor backgrounds, clean simple hand-drawn characters, gentle wind, quiet nostalgia and wonder",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, hand-drawn Japanese feature animation style, soft watercolor background of green meadow and cumulus clouds, simple gentle character design, warm nostalgic light, whimsical atmosphere",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1069,12 +1208,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Stylized 3D animated feature film still of a small round robot hugging a potted sprout in a cluttered workshop, big glossy expressive eyes, tactile plastic and rusty metal materials, soft global illumination with warm rim light, saturated cheerful palette, shallow depth of field",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, stylized 3D animated feature film look, big expressive eyes, soft subsurface scattering skin, rounded friendly proportions, warm cinematic lighting, saturated cheerful colors",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1097,12 +1240,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Classic hand-inked cel animation scene of a princess singing to woodland animals in an enchanted forest clearing, smooth flowing outlines, painted watercolor backdrop, bright rich colors, expressive squash and stretch, sparkles and swirling leaves, storybook warmth",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, classic 2D hand-drawn animated fairy-tale style, smooth flowing ink outlines, painted storybook background, bright rich cel colors, graceful princess-like pose, songbirds and flower petals",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1125,12 +1272,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Flat vector cartoon still of a goofy hero and a talking dog on a bright pastel desert road, thick uniform outlines, simple geometric character shapes, flat solid colors with no shading, wobbly squash-and-stretch pose, bold graphic background shapes, saturated candy palette",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, modern TV cartoon style, simple geometric character shapes, thick uniform outline, flat solid colors with no shading, big dot eyes, saturated candy palette, graphic flower shapes",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1153,12 +1304,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Octane render of a floating iridescent glass orb cradling a tiny glowing city, ray-traced reflections and refractions, volumetric god rays, subsurface scattering, dark studio with soft rim light, ultra detailed, 8k, cinematic depth of field, surreal futurism",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, 3D render in Octane style, glossy iridescent skin and glass-like petals, ray-traced reflections, volumetric rim lighting, ultra detailed, dark studio backdrop, surreal futurism",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1181,12 +1336,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Isometric cutaway diorama of a cozy tiny room floating on a clean pastel background, 30-degree projection, miniature furniture and plants, soft long shadows, crisp edges, limited harmonious palette, charming game-asset look",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, isometric miniature illustration, tiny diorama room with a woman and a vase of flowers, 30-degree projection, clean crisp edges, soft shadows, pastel limited palette",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1209,12 +1368,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Kawaii chibi mascot cluster of a tiny round bunny and a sleepy cloud sharing a strawberry cake, oversized head and stubby body, huge sparkling eyes with tiny mouth, thick soft outlines, pastel pink, mint and lavender palette, sparkles, hearts and sprinkles",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, kawaii chibi illustration, oversized head and tiny body, huge sparkling eyes, tiny mouth and blush cheeks, thick soft outlines, pastel pink and lavender palette, sparkles and hearts, chubby flowers",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1237,12 +1400,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Studio product photo of a glossy vinyl designer toy, a chubby bear-like character with X-shaped eyes and rounded limbs, solid pastel pink body with crisp paint application, soft reflections on a seamless backdrop, shallow depth of field, collectible blind-box look",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, designer vinyl art toy figure, glossy rounded body, minimalist dot eyes, solid pastel paint, collectible blind-box look, studio product lighting, flowers as sculpted accessories",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1265,12 +1432,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Whimsical gothic suburb with crooked houses and twisting leafless trees under an enormous swirling moon, spiral hills and black-and-white striped details, a gaunt pale figure with hollow dark eyes and wild hair, desaturated palette with violet accents, melancholic macabre humor",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, whimsical gothic macabre illustration, pale gaunt woman with huge hollow dark eyes and tousled black hair, striped dress, swirling twisted trees, desaturated palette with violet accents, melancholic charm",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1293,12 +1464,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Glossy oil painting on wood panel of a doe-eyed girl in a candy-pink dress holding a meat-shaped teddy bear, surrounded by cartoon skulls, balloons and tiny strange creatures, saturated bubblegum and teal palette, polished smooth finish, symmetrical altar-like composition, cute yet unsettling",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, pop surrealism lowbrow painting, enormous glossy doe eyes, porcelain skin, bubblegum pink and teal palette, tiny strange creatures and balloons among the flowers, polished smooth oil finish, cute yet unsettling",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1320,13 +1495,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Paletas dominadas por neon saturado — rosa, ciano e roxo — em contraste com cenários escuros, chuvosos e poluídos, remetendo ao noir aplicado ao futuro. Megacidades verticais cobertas de letreiros luminosos, hologramas publicitários e cabos expostos sugerem infraestrutura tecnológica caótica e não regulada. Personagens costumam trazer implantes cibernéticos visíveis, próteses mecânicas e roupas que misturam couro, plástico e acessórios tecnológicos. A composição favorece enquadramentos baixos e verticais que reforçam a escala opressiva das corporações sobre o indivíduo, com luz artificial substituindo quase inteiramente a luz natural.",
   "geral": {
    "prompt": "Rain-soaked megacity alley crowded with vertical holographic signs in Japanese and Chinese, magenta and cyan neon bouncing off wet asphalt, steam, tangled cables, lone silhouette under a transparent umbrella, lonely high-tech dystopia",
-   "gpt": "img/geral-Cyberpunk-gpt.png",
-   "gemini": "img/geral-Cyberpunk-gemini.jpeg"
+   "gpt": "img/geral-Cyberpunk-gpt.webp",
+   "gemini": "img/geral-Cyberpunk-gemini.webp",
+   "gpt_original": "originais/geral-Cyberpunk-gpt.png",
+   "gemini_original": "originais/geral-Cyberpunk-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant cyberpunk portrait of a young blonde woman holding a high-tech glowing jar with bio-luminescent lilac, red, and yellow flowers, neon reflections, futuristic rainy backdrop",
-   "gpt": "img/mulhercomflores-Cyberpunk-gpt.png",
-   "gemini": "img/mulhercomflores-Cyberpunk-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Cyberpunk-gpt.webp",
+   "gemini": "img/mulhercomflores-Cyberpunk-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Cyberpunk-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Cyberpunk-gemini.jpeg"
   }
  },
  {
@@ -1347,13 +1526,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Engrenagens, válvulas, tubulações de latão e cobre expostas e mecanismos movidos a vapor substituem a eletrônica moderna, sempre com acabamento artesanal aparente. A paleta tende a tons sépia, dourado e marrom-avermelhado, remetendo a metais envelhecidos e madeira nobre. O figurino se inspira na moda vitoriana — coletes, casacos longos, saias com anquinhas, óculos de proteção e chapéus de cartola — combinada a próteses e acessórios mecânicos. Cenários incluem dirigíveis, locomotivas ornamentadas e laboratórios repletos de instrumentos de latão, reforçando a fusão entre elegância histórica e invenção tecnológica retrô.",
   "geral": {
    "prompt": "A brass-riveted airship docking at a smoky Victorian tower, exposed gears, copper pipes venting steam, sepia-gold lamplight, polished leather and goggles, tactile Industrial Revolution wonder",
-   "gpt": "img/geral-Steampunk-gpt.png",
-   "gemini": "img/geral-Steampunk-gemini.jpeg"
+   "gpt": "img/geral-Steampunk-gpt.webp",
+   "gemini": "img/geral-Steampunk-gemini.webp",
+   "gpt_original": "originais/geral-Steampunk-gpt.png",
+   "gemini_original": "originais/geral-Steampunk-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant steampunk portrait of a young blonde woman in Victorian attire holding a brass jar, clockwork mechanism inside feeding lilac, red, and yellow copper-petaled flowers, gears",
-   "gpt": "img/mulhercomflores-Steampunk-gpt.png",
-   "gemini": "img/mulhercomflores-Steampunk-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Steampunk-gpt.webp",
+   "gemini": "img/mulhercomflores-Steampunk-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Steampunk-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Steampunk-gemini.jpeg"
   }
  },
  {
@@ -1375,13 +1558,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Gradientes vibrantes de rosa, roxo e azul elétrico dominam o céu, muitas vezes com um sol geométrico se pondo no horizonte. Grids (grades) em perspectiva que se estendem até o horizonte remetem à estética de computação gráfica primitiva dos anos 80. Silhuetas de carros, palmeiras ou figuras humanas aparecem retroiluminadas contra esse fundo, enquanto scanlines, brilho de neon (glow) e leve granulação de VHS reforçam a textura retrô. Tipografia em fontes futuristas com contorno neon e reflexos cromados completa a composição.",
   "geral": {
    "prompt": "A chrome sports car racing toward a giant striped sun above a glowing magenta wireframe grid, violet-to-orange gradient sky, scanlines and bloom, palm silhouettes, nostalgic 1980s night-drive loneliness",
-   "gpt": "img/geral-Synthwave-gpt.png",
-   "gemini": "img/geral-Synthwave-gemini.jpeg"
+   "gpt": "img/geral-Synthwave-gpt.webp",
+   "gemini": "img/geral-Synthwave-gemini.webp",
+   "gpt_original": "originais/geral-Synthwave-gpt.png",
+   "gemini_original": "originais/geral-Synthwave-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant synthwave portrait of a young blonde woman holding a retro-futuristic chrome jar with vibrant neon lilac, red, and yellow flowers, 1980s retro grid sunset background, neon glow",
-   "gpt": "img/mulhercomflores-Synthwave-gpt.png",
-   "gemini": "img/mulhercomflores-Synthwave-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Synthwave-gpt.webp",
+   "gemini": "img/mulhercomflores-Synthwave-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Synthwave-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Synthwave-gemini.jpeg"
   }
  },
  {
@@ -1403,13 +1590,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Arquitetura orgânica que integra vegetação às construções — telhados verdes, fachadas vivas e estruturas que lembram formas naturais — substitui o concreto bruto da ficção distópica. Painéis solares, turbinas eólicas e sistemas de captação de água aparecem integrados ao design, nunca escondidos. A paleta é luminosa, dominada por verdes, dourados e tons terrosos sob luz solar abundante e difusa, evocando otimismo. Composições tendem a mostrar comunidades, mercados ao ar livre e cidades verticais cobertas de jardins, com sensação geral de serenidade e abundância em vez de escassez.",
   "geral": {
    "prompt": "Terraced city of living green towers, wind turbines and solar glass petals, hanging gardens and waterways, warm morning sun through leaves, people sharing food on a rooftop, hopeful luminous community",
-   "gpt": "img/geral-Solarpunk-gpt.png",
-   "gemini": "img/geral-Solarpunk-gemini.jpeg"
+   "gpt": "img/geral-Solarpunk-gpt.webp",
+   "gemini": "img/geral-Solarpunk-gemini.webp",
+   "gpt_original": "originais/geral-Solarpunk-gpt.png",
+   "gemini_original": "originais/geral-Solarpunk-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant solarpunk portrait of a young blonde woman holding an eco-glass jar filled with fresh sustainable lilac, red, and yellow flowers, sun-drenched future green city background",
-   "gpt": "img/mulhercomflores-Solarpunk-gpt.png",
-   "gemini": "img/mulhercomflores-Solarpunk-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Solarpunk-gpt.webp",
+   "gemini": "img/mulhercomflores-Solarpunk-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Solarpunk-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Solarpunk-gemini.jpeg"
   }
  },
  {
@@ -1431,13 +1622,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Máquinas industriais pesadas, aviões de hélice, zepelins e veículos blindados de linhas aerodinâmicas dominam as composições, com acabamento metálico robusto em vez de ornamentado. A paleta combina tons terrosos, cáqui e ferrugem com acentos metálicos foscos, evocando fábricas, hangares e campos de batalha. A iluminação costuma ser dramática e de alto contraste, com fumaça e luz industrial dura reforçando uma atmosfera tensa e bélica. Elementos gráficos art déco — linhas geométricas escalonadas e tipografia angular — aparecem em cartazes, uniformes e painéis de controle.",
   "geral": {
    "prompt": "A colossal riveted armored train crawling through a soot-black industrial valley, oil-stained steel, smokestacks and searchlights, heavy rust and grease, desaturated olive and rust palette, oppressive wartime grit",
-   "gpt": "img/geral-Dieselpunk-gpt.png",
-   "gemini": "img/geral-Dieselpunk-gemini.jpeg"
+   "gpt": "img/geral-Dieselpunk-gpt.webp",
+   "gemini": "img/geral-Dieselpunk-gemini.webp",
+   "gpt_original": "originais/geral-Dieselpunk-gpt.png",
+   "gemini_original": "originais/geral-Dieselpunk-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant dieselpunk portrait of a young blonde woman wearing retro aviator gear, holding a heavy steel industrial jar with bold lilac, red, and yellow flowers, subtle oil soot, dark metal deco style",
-   "gpt": "img/mulhercomflores-Dieselpunk-gpt.png",
-   "gemini": "img/mulhercomflores-Dieselpunk-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Dieselpunk-gpt.webp",
+   "gemini": "img/mulhercomflores-Dieselpunk-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Dieselpunk-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Dieselpunk-gemini.jpeg"
   }
  },
  {
@@ -1460,13 +1655,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Arquitetura ogival em ruínas, gárgulas, vitrais quebrados e torres imponentes compõem cenários dominados por paleta escura, com acentos pontuais de vermelho sangue ou roxo profundo. A iluminação é quase sempre baixa-chave, vinda de velas, luar ou frestas estreitas, criando sombras densas e contrastes dramáticos. Névoa, corvos, ossos e tecidos pesados e rasgados reforçam uma atmosfera de decadência e perigo iminente. A ornamentação é entalhada e sombria, com simetria rigorosa que remete à grandiosidade e ao temor associados às catedrais medievais.",
   "geral": {
    "prompt": "A ruined cathedral of spires swallowed by cold fog, a lone cloaked wanderer, ash-grey and bruised violet palette, rotting stone and crows, faint ember glow, crushing melancholy and dread",
-   "gpt": "img/geral-Dark Fantasy-gpt.png",
-   "gemini": "img/geral-Dark Fantasy-gemini.jpeg"
+   "gpt": "img/geral-Dark Fantasy-gpt.webp",
+   "gemini": "img/geral-Dark Fantasy-gemini.webp",
+   "gpt_original": "originais/geral-Dark Fantasy-gpt.png",
+   "gemini_original": "originais/geral-Dark Fantasy-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant dark fantasy portrait of a young blonde woman in black lace, holding an ornate gothic jar with deep lilac, dark red, and pale yellow flowers, eerie mist, somber atmosphere",
-   "gpt": "img/mulhercomflores-Gótico-gpt.png",
-   "gemini": "img/mulhercomflores-Dark Fantasy-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Gótico-gpt.webp",
+   "gemini": "img/mulhercomflores-Dark Fantasy-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Gótico-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Dark Fantasy-gemini.jpeg"
   }
  },
  {
@@ -1488,13 +1687,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Formas tentaculares, anatomias assimétricas e geometrias não-euclidianas sugerem entidades que desafiam a lógica e a percepção humana comuns. A escala é propositalmente desproporcional e monumental, fazendo figuras humanas parecerem minúsculas diante de estruturas ou criaturas colossais. A paleta tende a tons sombrios — verde-oceano, roxo profundo, cinza-azulado — associados à umidade, ao abismo oceânico e à decomposição. A iluminação costuma revelar menos do que esconde, deixando partes cruciais da cena na penumbra para sustentar a sensação de mistério e terror indizível.",
   "geral": {
    "prompt": "A tiny lighthouse before a titanic tentacled shape rising from a black ocean, impossible non-Euclidean architecture on the horizon, sickly green sky, enormous scale against human insignificance, paralyzing dread",
-   "gpt": "img/geral-Cosmic Horror-gpt.png",
-   "gemini": "img/geral-Cosmic Horror-gemini.jpeg"
+   "gpt": "img/geral-Cosmic Horror-gpt.webp",
+   "gemini": "img/geral-Cosmic Horror-gemini.webp",
+   "gpt_original": "originais/geral-Cosmic Horror-gpt.png",
+   "gemini_original": "originais/geral-Cosmic Horror-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant yet unnerving cosmic horror portrait of a young blonde woman holding a jar, the lilac, red, and yellow flowers have subtle eye-like details and Eldritch geometry, eerie starlight",
-   "gpt": "img/mulhercomflores-Cosmic Horror-gpt.png",
-   "gemini": "img/mulhercomflores-Cosmic Horror-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Cosmic Horror-gpt.webp",
+   "gemini": "img/mulhercomflores-Cosmic Horror-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Cosmic Horror-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Cosmic Horror-gemini.jpeg"
   }
  },
  {
@@ -1515,13 +1718,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Tecido orgânico — músculos, tendões, carne exposta — funde-se visualmente a tubos, pistões, engrenagens e placas metálicas, sem linha clara de separação entre corpo e máquina. As superfícies alternam brilho úmido e viscoso com reflexos metálicos foscos, sugerindo que ambos os materiais pertencem ao mesmo organismo. A paleta é predominantemente escura, em tons de cinza, preto e grafite, pontuada por reflexos prateados. Formas sinuosas, alongadas e exosqueléticas substituem contornos humanos convencionais, com iluminação dramática e rasante que acentua texturas e reentrâncias.",
   "geral": {
    "prompt": "A cathedral-like corridor of vertebrae, ribbed tubes and oily black metal fused with bone and sinew, monochrome airbrushed greys, sickly sheen, wet cold biology merging with machinery, erotic and menacing",
-   "gpt": "img/geral-Biomecânico-gpt.png",
-   "gemini": "img/geral-Biomecânico-gemini.jpeg"
+   "gpt": "img/geral-Biomecânico-gpt.webp",
+   "gemini": "img/geral-Biomecânico-gemini.webp",
+   "gpt_original": "originais/geral-Biomecânico-gpt.png",
+   "gemini_original": "originais/geral-Biomecânico-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant biomechanical portrait of a young blonde woman, her hands fusing into an organic metallic jar holding synthetic lilac, red, and yellow flowers made of cables and petals, H.R. Giger style",
-   "gpt": "img/mulhercomflores-Biomecânico-gpt.png",
-   "gemini": "img/mulhercomflores-Biomecânico-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Biomecânico-gpt.webp",
+   "gemini": "img/mulhercomflores-Biomecânico-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Biomecânico-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Biomecânico-gemini.jpeg"
   }
  },
  {
@@ -1544,12 +1751,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Pink and cyan sunset gradient over a checkered floor, a white marble Greek bust with sunglasses, palm trees, retro grid sun, floating Windows 95 window panels, vertical katakana text, VHS scanlines and glitch noise, nostalgic mall aesthetic",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, vaporwave aesthetic, pink and cyan gradient sunset, marble Greek statue and palm trees, retro grid, floating glitchy window panels, katakana text, VHS scanlines, dreamy nostalgia",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1572,12 +1783,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "1950s space-age suburban kitchen of tomorrow, boomerang-shaped atomic patterns, chrome rocket-fin appliances, turquoise and cherry red palette, a smiling family beside a ray-gun toaster and a flying saucer outside the window, airbrushed retro advertising illustration",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, 1950s atompunk retro-futurist advertising illustration, turquoise and cherry red palette, atomic starburst patterns, chrome space-age props, smiling housewife pose, airbrushed gouache look",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1600,12 +1815,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Underground genetic lab interior with glowing translucent vats of floating embryonic creatures, vines and veiny flesh-like tubing growing through the machinery, acid green and sickly yellow bioluminescence, wet glossy textures, petri dishes and syringes, dystopian biotech atmosphere",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, biopunk style, translucent skin with faint glowing veins, orchids growing from her sleeve, laboratory glassware and vats in the background, acid green bioluminescent light, wet organic textures",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1628,12 +1847,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Majestic futuristic African metropolis at dusk with golden towers and glowing circuit patterns, a regal astronaut-queen in a gilded kente-patterned spacesuit with a sculptural braided crown, saturated gold, cobalt and magenta, ancestral geometric motifs, cosmic nebula sky",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, Afrofuturist portrait, regal pose, intricate braided crown, gold jewelry and kente-patterned futuristic garment, glowing geometric motifs, cosmic nebula background, saturated gold, cobalt and magenta",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1656,12 +1879,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Epic oil painting of an armored knight and a hooded sorceress facing a colossal dragon perched on a ruined mountain fortress, stormy sunset sky with shafts of light, glowing runes, intricate plate armor and scales, painterly fantasy book cover realism, heroic dramatic composition",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, epic fantasy book cover painting, ornate elven gown and mantle, enchanted glowing flowers in a crystal vase, misty ancient forest and castle, dramatic golden light, painterly realism",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1684,13 +1911,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O concept art prioriza comunicação rápida de ideias sobre acabamento polido: pinceladas largas e gestuais, com decisões de composição, luz e atmosfera (mood) definidas logo nos primeiros estudos, muitas vezes em escala de cinza ou paleta reduzida antes da cor final. É comum explorar várias variações (thumbnails) de um mesmo personagem ou cenário em pouco tempo, com camadas de pintura digital sobrepostas simulando textura e profundidade. O objetivo não é a obra em si, mas orientar modeladores 3D, diretores de arte e equipes de produção sobre aparência, escala e sensação de um elemento antes de ele existir fisicamente.",
   "geral": {
    "prompt": "An ancient dragon coiled around a ruined mountain citadel at sunrise, bold silhouette, atmospheric perspective with layered mist, rim light, loose painterly brush edges with controlled focal detail, epic scale and wonder",
-   "gpt": "img/geral-Concept Art-gpt.png",
-   "gemini": "img/geral-Concept Art-gemini.jpeg"
+   "gpt": "img/geral-Concept Art-gpt.webp",
+   "gemini": "img/geral-Concept Art-gemini.webp",
+   "gpt_original": "originais/geral-Concept Art-gpt.png",
+   "gemini_original": "originais/geral-Concept Art-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant character concept art of a young blonde woman holding a beautifully crafted jar with lilac, red, and yellow flowers, cinematic rim lighting, atmospheric depth, professional digital illustration",
-   "gpt": "img/mulhercomflores-Concept Art-gpt.png",
-   "gemini": "img/mulhercomflores-oncept Art-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Concept Art-gpt.webp",
+   "gemini": "img/mulhercomflores-oncept Art-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Concept Art-gpt.png",
+   "gemini_original": "originais/mulhercomflores-oncept Art-gemini.jpeg"
   }
  },
  {
@@ -1712,13 +1943,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A marca mais reconhecível do anime são os olhos grandes e extremamente expressivos, recurso que o próprio Tezuka popularizou para transmitir emoção com economia de traços diante das limitações da animação com poucos quadros por segundo. Os contornos são limpos e bem definidos, com sombreamento frequentemente aplicado em blocos chapados (cel shading) em vez de gradientes suaves, e a paleta varia de cores vibrantes e saturadas a tons pastel conforme o gênero. Expressões faciais exageradas, cabelos estilizados com mechas pontudas e proporções corporais alongadas completam uma linguagem visual historicamente otimizada para produção rápida em estúdio.",
   "geral": {
    "prompt": "A girl on a hilltop as wind whips her hair and a sky of towering cumulus glows at golden hour, clean linework, flat cel shading, large glossy eyes with highlights, speed lines, bittersweet longing",
-   "gpt": "img/geral-Anime-gpt.png",
-   "gemini": "img/geral-Anime-gemini.jpeg"
+   "gpt": "img/geral-Anime-gpt.webp",
+   "gemini": "img/geral-Anime-gemini.webp",
+   "gpt_original": "originais/geral-Anime-gpt.png",
+   "gemini_original": "originais/geral-Anime-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant modern anime portrait of a young blonde woman with expressive eyes, holding a stylized clay jar filled with colorful lilac, red, and yellow flowers, beautiful cel shading, Kyoto Animation style",
-   "gpt": "img/mulhercomflores-Anime-gpt.png",
-   "gemini": "img/mulhercomflores-Anime-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Anime-gpt.webp",
+   "gemini": "img/mulhercomflores-Anime-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Anime-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Anime-gemini.jpeg"
   }
  },
  {
@@ -1740,13 +1975,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A imagem é construída manualmente sobre uma grade visível de pixels individuais, cada um posicionado de forma deliberada para sugerir detalhe com o mínimo de informação possível. A paleta de cores é propositalmente limitada (muitas vezes entre 4 e 256 cores), sem suavização (anti-aliasing), o que resulta em contornos diagonais escalonados e 'serrilhados' característicos. Técnicas como dithering — mistura de pixels de cores distintas para simular tons intermediários — e sprites com poucos quadros de animação são marcas registradas do estilo, que exige grande economia visual para comunicar formas reconhecíveis.",
   "geral": {
    "prompt": "A cozy tavern at night in 16-bit pixel art, limited 32-color palette, hand-placed pixels, dithering for gradients, no anti-aliasing, crisp hard edges, warm firelight against blue shadows, nostalgic adventure mood",
-   "gpt": "img/geral-Pixel Art-gpt.png",
-   "gemini": "img/geral-Pixel Art-gemini.jpeg"
+   "gpt": "img/geral-Pixel Art-gpt.webp",
+   "gemini": "img/geral-Pixel Art-gemini.webp",
+   "gpt_original": "originais/geral-Pixel Art-gpt.png",
+   "gemini_original": "originais/geral-Pixel Art-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant 32-bit pixel art portrait of a young blonde woman holding a jar of detailed lilac, red, and yellow flowers, clean shading, aesthetic retro color palette, highly detailed pixel textures",
-   "gpt": "img/mulhercomflores-Pixel Art-gpt.png",
-   "gemini": "img/mulhercomflores-Pixel Art-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Pixel Art-gpt.webp",
+   "gemini": "img/mulhercomflores-Pixel Art-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Pixel Art-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Pixel Art-gemini.jpeg"
   }
  },
  {
@@ -1767,13 +2006,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Modelos são construídos inteiramente a partir de cubos volumétricos regulares (voxels) posicionados numa grade tridimensional, de forma análoga à pixel art, mas em três dimensões. As superfícies resultam em blocos sem curvas suaves, com iluminação simplificada que reforça a leitura geométrica dos volumes. A técnica permite um nível impressionante de detalhe com baixo custo computacional em comparação à modelagem 3D tradicional, favorecendo iteração rápida — por isso é popular tanto em jogos de construção e simulação quanto em ilustração voxel autoral.",
   "geral": {
    "prompt": "A floating island castle built from visible cubic voxels, isometric camera, uniform cube size, flat shaded faces with soft ambient occlusion, bright toy-like palette, playful miniature world",
-   "gpt": "img/geral-Voxel Art-gpt.png",
-   "gemini": "img/geral-Voxel Art-gemini.jpeg"
+   "gpt": "img/geral-Voxel Art-gpt.webp",
+   "gemini": "img/geral-Voxel Art-gemini.webp",
+   "gpt_original": "originais/geral-Voxel Art-gpt.png",
+   "gemini_original": "originais/geral-Voxel Art-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant voxel art rendering of a young blonde woman, beautifully constructed from tiny 3D cubes, holding a cubic jar filled with low-res lilac, red, and yellow blocky flowers, clean isometric view",
-   "gpt": "img/mulhercomflores-Voxel Art-gpt.png",
-   "gemini": "img/mulhercomflores-Voxel Art-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Voxel Art-gpt.webp",
+   "gemini": "img/mulhercomflores-Voxel Art-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Voxel Art-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Voxel Art-gemini.jpeg"
   }
  },
  {
@@ -1794,13 +2037,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Modelos tridimensionais são construídos com um número reduzido e deliberadamente visível de polígonos (triângulos), resultando em superfícies planas e facetadas em vez de curvas suaves. A iluminação costuma ser suave e simplificada, criando gradientes de cor discretos entre cada face do modelo, o que reforça a geometria angular em vez de escondê-la. A paleta tende a ser vibrante e plana, com paisagens, objetos e personagens reduzidos às suas formas geométricas mais essenciais, mantendo legibilidade e apelo visual mesmo com poucos detalhes.",
   "geral": {
    "prompt": "A mountain valley with a river sculpted from flat-shaded triangles, visible polygon facets, gradient-free color per face, soft directional light, crisp geometric calm, minimal and serene",
-   "gpt": "img/geral-Low Poly-gpt.png",
-   "gemini": "img/geral-Low Poly-gemini.jpeg"
+   "gpt": "img/geral-Low Poly-gpt.webp",
+   "gemini": "img/geral-Low Poly-gemini.webp",
+   "gpt_original": "originais/geral-Low Poly-gpt.png",
+   "gemini_original": "originais/geral-Low Poly-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant low-poly 3D portrait of a young blonde woman, geometric stylized features, holding a faceted polygon jar with sharp lilac, red, and yellow paper-like geometric flowers, clean lighting",
-   "gpt": "img/mulhercomflores-Low Poly-gpt.png",
-   "gemini": "img/mulhercomflores-Low Poly-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Low Poly-gpt.webp",
+   "gemini": "img/mulhercomflores-Low Poly-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Low Poly-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Low Poly-gemini.jpeg"
   }
  },
  {
@@ -1822,13 +2069,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Cores chapadas, saturadas e de alto contraste substituem o sutil trabalho tonal da pintura tradicional, muitas vezes delimitadas por contornos pretos grossos e bem definidos, como nos quadrinhos impressos. A trama de pontos Ben-Day — técnica de impressão comercial barata, reproduzida manualmente por artistas como Lichtenstein — simula gradações de cor e sombra através de padrões repetitivos de pontos. A repetição em série de uma mesma imagem, como nos retratos serigrafados de Warhol, e a apropriação direta de ícones da publicidade, embalagens e celebridades da mídia de massa são marcas centrais do estilo.",
   "geral": {
    "prompt": "A comic-book heroine mid-gasp with a speech balloon, thick black outlines, Ben-Day dot halftone shading, flat primary red-yellow-blue fills, mechanical print misregistration, loud and ironic consumer glamour",
-   "gpt": "img/geral-Pop Art-gpt.png",
-   "gemini": "img/geral-Pop Art-gemini.jpeg"
+   "gpt": "img/geral-Pop Art-gpt.webp",
+   "gemini": "img/geral-Pop Art-gemini.webp",
+   "gpt_original": "originais/geral-Pop Art-gpt.png",
+   "gemini_original": "originais/geral-Pop Art-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant pop art portrait of a young blonde woman holding a bold outlined jar with highly saturated lilac, red, and yellow flowers, Andy Warhol style, Ben-Day dots texture background",
-   "gpt": "img/mulhercomflores-Pop Art-gpt.png",
-   "gemini": "img/mulhercomflores-Pop Art-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Pop Art-gpt.webp",
+   "gemini": "img/mulhercomflores-Pop Art-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Pop Art-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Pop Art-gemini.jpeg"
   }
  },
  {
@@ -1850,13 +2101,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O minimalismo despe a obra de metáfora, narrativa e espetáculo comercial, voltando-se à geometria pura, à repetição e a materiais industriais. Predominam formas geométricas simples — quadrados e retângulos de bordas duras — organizadas em composições matematicamente regulares e não hierárquicas. A paleta de cores é reduzida, muitas vezes monocromática, e grandes áreas de espaço vazio substituem o detalhamento, priorizando as propriedades físicas da obra (escala, peso, posição e material) sobre qualquer significado simbólico.",
   "geral": {
    "prompt": "One tiny dark tree at the lower edge of a vast empty pale field, over eighty percent negative space, a single hairline horizon, two muted tones only, perfectly still, silence and contemplative solitude",
-   "gpt": "img/geral-Minimalismo-gpt.png",
-   "gemini": "img/geral-Minimalismo-gemini.jpeg"
+   "gpt": "img/geral-Minimalismo-gpt.webp",
+   "gemini": "img/geral-Minimalismo-gemini.webp",
+   "gpt_original": "originais/geral-Minimalismo-gpt.png",
+   "gemini_original": "originais/geral-Minimalismo-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant minimalist portrait of a young blonde woman, simple fine lines, holding a sleek abstract jar with single lilac, red, and yellow stems, vast clean neutral background, elegant simplicity",
-   "gpt": "img/mulhercomflores-Minimalismo-gpt.png",
-   "gemini": "img/mulhercomflores-Minimalismo-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Minimalismo-gpt.webp",
+   "gemini": "img/mulhercomflores-Minimalismo-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Minimalismo-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Minimalismo-gemini.jpeg"
   }
  },
  {
@@ -1878,13 +2133,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A pintura digital simula pinceladas, texturas e misturas de tinta físicas através de pincéis programáveis, organizados em camadas que podem ser reordenadas, apagadas ou ajustadas sem destruir o trabalho anterior — vantagem sobre a pintura tradicional que permite desfazer ilimitado e experimentação livre. O controle preciso de luz e sombra é feito por camadas com modos de mesclagem (blending), permitindo transições suaves de cor ou, alternativamente, acabamentos altamente estilizados. A técnica é versátil o suficiente para produzir tanto resultados fotorrealistas quanto pinceladas expressivas que imitam óleo, aquarela ou guache.",
   "geral": {
    "prompt": "A weathered fantasy knight in close-up, soft customized digital brush edges, blended skin transitions, painterly color temperature shifts between warm key light and cool fill, visible blocking-in strokes, quiet heroic exhaustion",
-   "gpt": "img/geral-Pintura Digital-gpt.png",
-   "gemini": "img/geral-Pintura Digital-gemini.jpeg"
+   "gpt": "img/geral-Pintura Digital-gpt.webp",
+   "gemini": "img/geral-Pintura Digital-gemini.webp",
+   "gpt_original": "originais/geral-Pintura Digital-gpt.png",
+   "gemini_original": "originais/geral-Pintura Digital-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant digital painting of a young blonde woman holding a ceramic jar, detailed lilac, red, and yellow flowers, soft digital brush strokes, perfect lighting, hyper-realistic fine-art illustration",
-   "gpt": "img/mulhercomflores-Pintura Digital-gpt.png",
-   "gemini": "img/mulhercomflores-Pintura Digital-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Pintura Digital-gpt.webp",
+   "gemini": "img/mulhercomflores-Pintura Digital-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Pintura Digital-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Pintura Digital-gemini.jpeg"
   }
  },
  {
@@ -1906,13 +2165,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A arte abstrata rompe deliberadamente com qualquer referência figurativa reconhecível, concentrando-se em composição, cor, forma e ritmo visual como fins em si mesmos. A técnica pode variar amplamente: de composições geométricas rigorosamente controladas, como no Suprematismo de Malevich, a gestos espontâneos e expressivos que surgiriam décadas depois no Expressionismo Abstrato americano. Relações de cor, equilíbrio de massas visuais e tensão entre formas substituem a narrativa ou o motivo reconhecível como elementos centrais de leitura da obra.",
   "geral": {
    "prompt": "A canvas of gestural drips, splatters and slashing brushwork in saturated red and black over raw linen, no recognizable subject, visible bodily energy and paint thickness, raw emotion made physical",
-   "gpt": "img/geral-Arte Abstrata-gpt.png",
-   "gemini": "img/geral-Arte Abstrata-gemini.jpeg"
+   "gpt": "img/geral-Arte Abstrata-gpt.webp",
+   "gemini": "img/geral-Arte Abstrata-gemini.webp",
+   "gpt_original": "originais/geral-Arte Abstrata-gpt.png",
+   "gemini_original": "originais/geral-Arte Abstrata-gemini.jpeg"
   },
   "mulher": {
    "prompt": "An elegant abstract portrait suggestive of a young blonde woman holding a jar, explosions of lilac, red, and yellow paint splatters representing flowers, textured canvas, non-representational fine art",
-   "gpt": "img/mulhercomflores-Arte Abstrata-gpt.png",
-   "gemini": "img/mulhercomflores-Arte Abstrata-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Arte Abstrata-gpt.webp",
+   "gemini": "img/mulhercomflores-Arte Abstrata-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Arte Abstrata-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Arte Abstrata-gemini.jpeg"
   }
  },
  {
@@ -1934,13 +2197,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O traço é definido por contornos grossos e marcados, historicamente feitos com latas de spray sobre superfícies públicas como vagões de metrô e muros. O lettering — a estilização elaborada de letras e assinaturas (tags) — é um elemento técnico central, assim como o uso de cores vibrantes e de alto contraste para garantir legibilidade e impacto à distância. A obra frequentemente dialoga com a textura, a arquitetura e as imperfeições da superfície onde é aplicada, integrando o suporte físico à composição de um jeito que a pintura tradicional em tela normalmente não permite.",
   "geral": {
    "prompt": "A lone stenciled child releasing a balloon on a cracked brick wall, crisp two-layer spray stencil, runny drips, overspray halos, peeling posters around, defiant tender protest",
-   "gpt": "img/geral-Street Art-gpt.png",
-   "gemini": "img/geral-Street Art-gemini.jpeg"
+   "gpt": "img/geral-Street Art-gpt.webp",
+   "gemini": "img/geral-Street Art-gemini.webp",
+   "gpt_original": "originais/geral-Street Art-gpt.png",
+   "gemini_original": "originais/geral-Street Art-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant street art stencil portrait of a young blonde woman holding a jar on a concrete wall, spray painted lilac, red, and yellow flowers, vibrant paint drips, urban graffiti masterwork",
-   "gpt": "img/mulhercomflores-Street Art-gpt.png",
-   "gemini": "img/mulhercomflores-Street Art-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Street Art-gpt.webp",
+   "gemini": "img/mulhercomflores-Street Art-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Street Art-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Street Art-gemini.jpeg"
   }
  },
  {
@@ -1963,12 +2230,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Flat vector illustration of a bustling city street with simple geometric buildings, solid color fills with no gradients, shadows or textures, limited vibrant palette of coral, teal and sunflower yellow, clean minimal shapes, editorial infographic style",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, flat design vector illustration, woman built from simple geometric shapes, solid color fills, no gradients or shadows, limited vibrant palette, clean minimal vase and flowers",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -1991,12 +2262,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Playful Memphis-style composition on a white ground, squiggly black lines, triangles, zigzags, dots and terrazzo-speckle patterns in hot pink, turquoise, lemon yellow and black, asymmetrical colorful abstract furniture-like blocks, 1980s postmodern energy",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, Memphis design style 1980s, woman and vase shown with bold geometric shapes, squiggles, zigzags and dots in hot pink, turquoise and yellow, terrazzo pattern background, playful asymmetry",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2019,12 +2294,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Pure black-and-white op art composition of concentric warped circles and undulating parallel lines creating an illusion of a pulsing three-dimensional sphere, razor-sharp edges, high contrast, moiré vibration, hypnotic optical illusion, flat acrylic finish",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, op art style, portrait distorted by black-and-white undulating parallel lines and concentric circles, optical illusion of movement, razor-sharp edges, high contrast, flowers made of moiré rings",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2047,12 +2326,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Vintage lithograph propaganda poster, a heroic worker pointing toward a rising sun seen from a low angle, bold diagonal composition, limited flat palette of red, black and cream, huge condensed sans-serif slogan, slightly misregistered ink and aged paper folds",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, vintage propaganda poster style, heroic low-angle pose holding up the vase of flowers, bold flat red, black and cream palette, large condensed slogan text, grainy lithograph print, aged paper",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2075,13 +2358,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Usa proporção widescreen (letterbox/anamórfica), iluminação direcional e dramática que modela o rosto e separa o sujeito do fundo, e color grading de contraste complementar entre sombras frias (azul-esverdeadas) e tons de pele quentes (laranja). Agrega granulação sutil de filme, vinheta leve e profundidade de campo rasa para guiar o olhar, além de composição pensada como um frame isolado de uma narrativa maior, com espaço negativo e tensão dramática.",
   "geral": {
    "prompt": "A solitary detective under a flickering sodium streetlight in thick night mist, 2.39:1 anamorphic frame, shallow depth of field with oval bokeh, teal-orange grade, 35mm grain, long lens compression, tense stillness",
-   "gpt": "img/geral-Fotografia Cinematográfica-gpt.png",
-   "gemini": "img/geral-Fotografia Cinematográfica-gemini.jpeg"
+   "gpt": "img/geral-Fotografia Cinematográfica-gpt.webp",
+   "gemini": "img/geral-Fotografia Cinematográfica-gemini.webp",
+   "gpt_original": "originais/geral-Fotografia Cinematográfica-gpt.png",
+   "gemini_original": "originais/geral-Fotografia Cinematográfica-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant cinematic 35mm film still of a young blonde woman holding a ceramic jar filled with vibrant lilac, red, and yellow flowers, shallow depth of field, natural anamorphic lens flare, moody color grading",
-   "gpt": "img/mulhercomflores-Fotografia Cinematográfica-gpt.png",
-   "gemini": "img/mulhercomflores-Fotografia Cinematográfica-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Fotografia Cinematográfica-gpt.webp",
+   "gemini": "img/mulhercomflores-Fotografia Cinematográfica-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Fotografia Cinematográfica-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Fotografia Cinematográfica-gemini.jpeg"
   }
  },
  {
@@ -2103,13 +2390,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Caracteriza-se pela ampliação extrema de sujeitos pequenos (insetos, gotas, texturas, flores), revelando padrões e estruturas normalmente imperceptíveis. A profundidade de campo é extremamente rasa, produzindo fundo desfocado (bokeh) suave e foco cirúrgico em uma fatia milimétrica da cena. Exige iluminação controlada e difusa para evitar sombras duras tão perto do sujeito, e a composição costuma isolar texturas, simetrias e padrões repetitivos que normalmente passam despercebidos.",
   "geral": {
    "prompt": "A single dewdrop on a leaf vein at 5:1 magnification, razor-thin focus plane, creamy bokeh dissolving the background, tiny refracted world inside the droplet, soft morning backlight, intimate stillness",
-   "gpt": "img/geral-Fotografia Macro-gpt.png",
-   "gemini": "img/geral-Fotografia Macro-gemini.jpeg"
+   "gpt": "img/geral-Fotografia Macro-gpt.webp",
+   "gemini": "img/geral-Fotografia Macro-gemini.webp",
+   "gpt_original": "originais/geral-Fotografia Macro-gpt.png",
+   "gemini_original": "originais/geral-Fotografia Macro-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant macro photography close-up focusing on the hands of a young blonde woman holding a jar, extreme crisp detail on the petals of lilac, red, and yellow flowers, stunning soft bokeh background",
-   "gpt": "img/mulhercomflores-Fotografia Macro-gpt.png",
-   "gemini": "img/mulhercomflores-Fotografia Macro-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Fotografia Macro-gpt.webp",
+   "gemini": "img/mulhercomflores-Fotografia Macro-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Fotografia Macro-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Fotografia Macro-gemini.jpeg"
   }
  },
  {
@@ -2131,13 +2422,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Consiste na sobreposição semitransparente de duas imagens distintas — tipicamente um retrato e uma paisagem, textura ou silhueta — mesclando tons claros e escuros de cada camada para que uma 'revele' a outra. As áreas de alto contraste de uma imagem funcionam como máscara natural para a segunda exposição, criando composições onde cenários, texturas ou elementos simbólicos parecem brotar de dentro da silhueta do sujeito principal.",
   "geral": {
    "prompt": "A man's profile silhouette filled with a misty pine forest and starry sky, two images blended through transparent highlights, clean white background, soft gradient edges, introspection and melancholy",
-   "gpt": "img/geral-Double Exposure-gpt.png",
-   "gemini": "img/geral-Double Exposure-gemini.jpeg"
+   "gpt": "img/geral-Double Exposure-gpt.webp",
+   "gemini": "img/geral-Double Exposure-gemini.webp",
+   "gpt_original": "originais/geral-Double Exposure-gpt.png",
+   "gemini_original": "originais/geral-Double Exposure-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant double exposure portrait of a young blonde woman's silhouette holding a jar, overlaid perfectly with a lush blooming garden of lilac, red, and yellow flowers, artistic fusion",
-   "gpt": "img/mulhercomflores-Double Exposure-gpt.png",
-   "gemini": "img/mulhercomflores-Double Exposure-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Double Exposure-gpt.webp",
+   "gemini": "img/mulhercomflores-Double Exposure-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Double Exposure-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Double Exposure-gemini.jpeg"
   }
  },
  {
@@ -2159,13 +2454,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Caracteriza-se por vinhetagem forte nas bordas do quadro, cores altamente saturadas e por vezes deslocadas cromaticamente, leve desfoque e distorção óptica típicos de lentes simples e baratas, além do grão visível do filme analógico. Vazamentos de luz, exposições múltiplas acidentais e enquadramentos espontâneos e intuitivos reforçam o caráter imprevisível e cru da técnica.",
   "geral": {
    "prompt": "Friends laughing around a beach bonfire at dusk, heavy vignette, oversaturated cross-processed greens and magentas, orange light leak streak across the frame, slight blur and imperfect framing, spontaneous nostalgic joy",
-   "gpt": "img/geral-Lomografia-gpt.png",
-   "gemini": "img/geral-Lomografia-gemini.jpeg"
+   "gpt": "img/geral-Lomografia-gpt.webp",
+   "gemini": "img/geral-Lomografia-gemini.webp",
+   "gpt_original": "originais/geral-Lomografia-gpt.png",
+   "gemini_original": "originais/geral-Lomografia-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant lomography candid photograph of a young blonde woman holding a jar with lilac, red, and yellow flowers, retro light leaks, cross-processed high saturation colors, soft vignette",
-   "gpt": "img/mulhercomflores-Lomografia-gpt.png",
-   "gemini": "img/mulhercomflores-Lomografia-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Lomografia-gpt.webp",
+   "gemini": "img/mulhercomflores-Lomografia-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Lomografia-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Lomografia-gemini.jpeg"
   }
  },
  {
@@ -2187,13 +2486,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Apresenta monocromia em tons de marrom amarelado substituindo o preto e branco neutro, contraste suave e tons médios comprimidos, como era típico de processos de cópia antigos. Bordas desgastadas, manchas, arranhões e cantos amarelados simulam o desgaste físico do papel fotográfico ao longo de décadas, somados a granulação grossa e irregular que remete à baixa sensibilidade dos filmes e papéis da época.",
   "geral": {
    "prompt": "A crowded railway platform in a long-exposure 1890s photograph, sepia tones, ghosted blur of moving passengers, scratches, dust specks and fading edges, soft focus, stiff posed figures, hushed passage of time",
-   "gpt": "img/geral-Vintage-gpt.png",
-   "gemini": "img/geral-Vintage-gemini.jpeg"
+   "gpt": "img/geral-Vintage-gpt.webp",
+   "gemini": "img/geral-Vintage-gemini.webp",
+   "gpt_original": "originais/geral-Vintage-gpt.png",
+   "gemini_original": "originais/geral-Vintage-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant 19th-century vintage photograph of a young blonde woman holding a rustic jar with hand-tinted lilac, red, and yellow flowers, sepia tone, soft focus, subtle dust and fine scratches",
-   "gpt": "img/mulhercomflores-Vintage-gpt.png",
-   "gemini": "img/mulhercomflores-Vintage-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Vintage-gpt.webp",
+   "gemini": "img/mulhercomflores-Vintage-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Vintage-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Vintage-gemini.jpeg"
   }
  },
  {
@@ -2215,13 +2518,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Usa iluminação de altíssimo contraste com sombras duras e recortadas (claro-escuro herdado do expressionismo), venezianas e silhuetas recortadas contra luzes pontuais. Letreiros de neon colorido se refletem em poças d'água, vidro e metal molhado sob chuva constante, enquanto névoa e fumaça suavizam feixes de luz volumétrica. A composição favorece enquadramentos em diagonal, ângulos baixos e espaços urbanos verticais e labirínticos que remetem tanto ao suspense policial quanto à opressão de megacidades futuristas.",
   "geral": {
    "prompt": "A trench-coated detective by a venetian-blind window, slatted neon-pink stripes cutting through cigarette smoke, rain on glass, deep crushed blacks, a single colored light source, world-weary solitude",
-   "gpt": "img/geral-Cyber-Noir-gpt.png",
-   "gemini": "img/geral-Cyber-Noir-gemini.jpeg"
+   "gpt": "img/geral-Cyber-Noir-gpt.webp",
+   "gemini": "img/geral-Cyber-Noir-gemini.webp",
+   "gpt_original": "originais/geral-Cyber-Noir-gpt.png",
+   "gemini_original": "originais/geral-Cyber-Noir-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant cyber-noir portrait of a young blonde woman holding a glass jar with lilac, red, and yellow flowers, illuminated by a single neon sign through blinds, long high-contrast cinematic shadows",
-   "gpt": "img/mulhercomflores-Cyber-Noir-gpt.png",
-   "gemini": "img/mulhercomflores-Cyber-Noir-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Cyber-Noir-gpt.webp",
+   "gemini": "img/mulhercomflores-Cyber-Noir-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Cyber-Noir-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Cyber-Noir-gemini.jpeg"
   }
  },
  {
@@ -2242,13 +2549,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Produz desfoque seletivo progressivo nas bordas superior e inferior do quadro, deixando nítida apenas uma faixa horizontal estreita no centro — simulando a profundidade de campo rasíssima típica de fotografia macro de maquetes. É reforçado por aumento de saturação e contraste, e funciona melhor em cenas vistas de cima, com pessoas, carros ou construções pequenas o suficiente para reforçar a ilusão de escala de brinquedo.",
   "geral": {
    "prompt": "A busy city intersection photographed from a high angle, extremely narrow strip of sharp focus with strong blur at top and bottom, boosted saturation, toy-like cars and people, playful miniature feel",
-   "gpt": "img/geral-Tilt-Shift-gpt.png",
-   "gemini": "img/geral-Tilt-Shift-gemini.jpeg"
+   "gpt": "img/geral-Tilt-Shift-gpt.webp",
+   "gemini": "img/geral-Tilt-Shift-gemini.webp",
+   "gpt_original": "originais/geral-Tilt-Shift-gpt.png",
+   "gemini_original": "originais/geral-Tilt-Shift-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant tilt-shift miniature photograph of a young blonde woman standing in a tiny garden, holding a small jar of lilac, red, and yellow flowers, selective narrow blur, toy-like scale effect",
-   "gpt": "img/mulhercomflores-Tilt-Shift-gpt.png",
-   "gemini": "img/mulhercomflores-Tilt-Shift-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Tilt-Shift-gpt.webp",
+   "gemini": "img/mulhercomflores-Tilt-Shift-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Tilt-Shift-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Tilt-Shift-gemini.jpeg"
   }
  },
  {
@@ -2270,13 +2581,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Caracteriza-se por distorções de pixel, deslocamento e vazamento entre canais de cor (RGB), blocos de compressão JPEG exagerados e visíveis, e faixas de ruído digital que fragmentam a imagem em blocos ou listras. Elementos da imagem podem aparecer deslocados, repetidos ou 'derretidos' horizontalmente, como se o arquivo estivesse sendo lido de forma incorreta — um efeito que remete diretamente à corrupção real de dados digitais.",
   "geral": {
    "prompt": "A face dissolving through RGB channel splits and horizontal data-bending slices, pixel sorting streaks, scanline tears, corrupted blocks of saturated color, VHS tracking noise, anxious digital decay",
-   "gpt": "img/geral-Glitch Art-gpt.png",
-   "gemini": "img/geral-Glitch Art-gemini.jpeg"
+   "gpt": "img/geral-Glitch Art-gpt.webp",
+   "gemini": "img/geral-Glitch Art-gemini.webp",
+   "gpt_original": "originais/geral-Glitch Art-gpt.png",
+   "gemini_original": "originais/geral-Glitch Art-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant glitch art portrait of a young blonde woman holding a jar of lilac, red, and yellow flowers, artistic digital displacement lines, corrupted data aesthetics, sophisticated color channel separation",
-   "gpt": "img/mulhercomflores-Glitch Art-gpt.png",
-   "gemini": "img/mulhercomflores-Glitch Art-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Glitch Art-gpt.webp",
+   "gemini": "img/mulhercomflores-Glitch Art-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Glitch Art-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Glitch Art-gemini.jpeg"
   }
  },
  {
@@ -2299,12 +2614,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Hyperrealistic close-up portrait of an elderly fisherman with weathered skin, every pore, wrinkle and eyelash rendered in microscopic detail, glassy wet reflections in the eyes, razor-sharp focus with soft background blur, natural window light, indistinguishable from a photograph, 8k",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, photorealistic hyperrealism portrait, visible skin pores and fine hairs, glossy wet reflections on the glass vase, shot on 85mm lens, razor-sharp focus, natural window light, 8k detail",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2327,12 +2646,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Classic black-and-white studio portrait of a weathered jazz musician against a seamless grey backdrop, Rembrandt lighting with a triangle of light on the cheek, deep sculpted shadows, direct intense gaze, 85mm lens, fine film grain, timeless and dignified",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, classic studio portrait photograph, Rembrandt lighting with triangle of light on the cheek, seamless grey backdrop, soft beauty dish, 85mm lens, direct gaze, refined retouching",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2355,12 +2678,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "High-end commercial product photograph of a crystal perfume bottle on a mirrored acrylic surface, soft large softbox lighting with crisp rim highlights, clean seamless pastel backdrop, perfect reflections, macro sharpness edge to edge, subtle floral props, luxury advertising look",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, commercial product-style photograph, elegant hands of a young blonde woman presenting a glass vase of lilac, red and yellow flowers, seamless pastel backdrop, soft softbox lighting, crisp reflections, macro sharpness",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2383,12 +2710,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Wheat field at golden hour, low sun flaring through backlit grass seeds, long soft shadows, warm amber and honey tones, glowing rim light on every stalk, creamy bokeh circles, a lone figure in silhouette, dreamy cinematic nostalgia",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, golden hour portrait photography, warm low sun behind her, glowing rim light in her blonde hair, soft lens flare, creamy bokeh, honey and amber tones, shot at f/1.8",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2411,12 +2742,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Gritty black-and-white street photograph of a rainy crossing in a crowded city, a man leaping over a puddle in mid-air, high contrast with deep shadows, heavy Tri-X film grain, geometric layers of umbrellas and reflections, 35mm Leica decisive moment",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, black-and-white candid street photography, woman with the vase of flowers walking on a busy sidewalk, harsh sunlight and deep shadows, heavy film grain, 35mm Leica, decisive moment, high contrast",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2439,12 +2774,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Instant Polaroid photo of friends laughing on a sunlit beach boardwalk, wide white border with a handwritten caption, faded warm colors with a teal cast in the shadows, soft focus, slight vignette, direct flash glare, light leak, nostalgic summer memory",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, vintage Polaroid instant photo, thick white frame with handwritten caption, faded warm colors, soft focus and vignette, direct flash glare, light leak, nostalgic snapshot",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2467,12 +2806,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Top-down aerial drone photograph of turquoise tidal channels branching through golden salt flats like veins, tiny people for scale, abstract geometric patterns, long soft shadows at sunrise, high contrast saturated colors, 90-degree nadir view, wide-angle gimbal sharpness",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, aerial top-down drone shot of a tiny young blonde woman standing on a green meadow holding a vase of lilac, red and yellow flowers, long soft shadow, geometric field patterns, wide-angle gimbal sharpness",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2494,13 +2837,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os pigmentos são diluídos em água e ligados por goma arábica, aplicados em camadas transparentes sobre papel absorvente — por isso o branco do papel, e não tinta branca, funciona como a cor mais clara da pintura. O resultado depende do controle da água: pinceladas sobre papel ainda úmido criam bordas suaves e manchas que se espalham sozinhas, enquanto aplicações sobre papel seco preservam bordas nítidas. Camadas translúcidas se sobrepõem (técnica de 'glazing') para construir profundidade de cor sem perder luminosidade. A textura granulada do papel permanece visível através da tinta, e erros são difíceis de corrigir, o que dá ao estilo sua espontaneidade característica.",
   "geral": {
    "prompt": "A bouquet of wild poppies and cornflowers in wet-on-wet washes, pigments blooming and bleeding into each other, cauliflower backruns, untouched white paper as highlights, granulating pigment, soft tender fragility",
-   "gpt": "img/geral-Aquarela-gpt.png",
-   "gemini": "img/geral-Aquarela-gemini.jpeg"
+   "gpt": "img/geral-Aquarela-gpt.webp",
+   "gemini": "img/geral-Aquarela-gemini.webp",
+   "gpt_original": "originais/geral-Aquarela-gpt.png",
+   "gemini_original": "originais/geral-Aquarela-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant watercolor portrait of a young blonde woman holding a translucent jar, beautiful soft bleeding of lilac, red, and yellow flowers, fine paper texture, splash effects",
-   "gpt": "img/mulhercomflores-Aquarela-gpt.png",
-   "gemini": "img/mulhercomflores-Aquarela-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Aquarela-gpt.webp",
+   "gemini": "img/mulhercomflores-Aquarela-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Aquarela-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Aquarela-gemini.jpeg"
   }
  },
  {
@@ -2522,13 +2869,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O carvão produz uma escala tonal rica, do preto profundo ao cinza mais claro, com grande facilidade de esfumar e misturar o pigmento com os dedos ou com um esfuminho (stump) para criar gradações suaves. A ponta pode ser afiada para linhas precisas ou usada de lado para cobrir áreas amplas rapidamente. Técnicas de subtração — apagar ou 'desenhar com a borracha' — permitem recuperar luzes diretamente do fundo escuro. A textura granulada do papel e os traços gestuais do movimento da mão ficam visíveis na obra final, e uma camada de fixador é necessária para evitar que o pigmento se solte.",
   "geral": {
    "prompt": "An old sailor's weathered face emerging from smudged shadow, deep velvety blacks, finger-blended halftones, eraser-pulled highlights, visible paper tooth, heavy emotion and hard-lived years",
-   "gpt": "img/geral-Desenho a Carvão-gpt.png",
-   "gemini": "img/geral-Desenho a Carvão-gemini.jpeg"
+   "gpt": "img/geral-Desenho a Carvão-gpt.webp",
+   "gemini": "img/geral-Desenho a Carvão-gemini.webp",
+   "gpt_original": "originais/geral-Desenho a Carvão-gpt.png",
+   "gemini_original": "originais/geral-Desenho a Carvão-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant charcoal sketch of a young blonde woman holding a jar, flowers accented with subtle selective color pops of lilac, red, and yellow pastel, textured paper, smudge art techniques",
-   "gpt": "img/mulhercomflores-Desenho a Carvão-gpt.png",
-   "gemini": "img/mulhercomflores-Desenho a Carvão-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Desenho a Carvão-gpt.webp",
+   "gemini": "img/mulhercomflores-Desenho a Carvão-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Desenho a Carvão-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Desenho a Carvão-gemini.jpeg"
   }
  },
  {
@@ -2550,13 +2901,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A imagem é entalhada em relevo numa matriz de madeira ou linóleo: o artista remove com goivas as áreas que devem ficar em branco, deixando em relevo apenas o que será impresso. A superfície entalhada é entintada com rolo e pressionada contra o papel, produzindo contornos grossos e angulares, com áreas de preto e branco (ou cor) totalmente chapadas, sem gradação tonal. As marcas da ferramenta de corte ficam visíveis nas bordas e texturas da imagem final, e o desenho precisa ser pensado espelhado, já que a impressão inverte a matriz.",
   "geral": {
    "prompt": "An owl on a bare branch carved in stark black and white, gouge marks visible, bold chisel cuts, no gradients, slight ink uneven coverage, cordel woodcut energy, mysterious and ancestral",
-   "gpt": "img/geral-Xilogravura-gpt.png",
-   "gemini": "img/geral-Xilogravura-gemini.jpeg"
+   "gpt": "img/geral-Xilogravura-gpt.webp",
+   "gemini": "img/geral-Xilogravura-gemini.webp",
+   "gpt_original": "originais/geral-Xilogravura-gpt.png",
+   "gemini_original": "originais/geral-Xilogravura-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant linocut print portrait of a young blonde woman holding an engraved jar with stylized lilac, red, and yellow flowers, bold chiseled ink lines, hand-carved block printing texture",
-   "gpt": "img/mulhercomflores-Xilogravura-gpt.png",
-   "gemini": "img/mulhercomflores-Xilogravura-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Xilogravura-gpt.webp",
+   "gemini": "img/mulhercomflores-Xilogravura-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Xilogravura-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Xilogravura-gemini.jpeg"
   }
  },
  {
@@ -2578,13 +2933,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "As formas nascem exclusivamente de dobras geométricas precisas numa folha plana, tradicionalmente sem cortes ou colagem, resultando em superfícies facetadas com arestas nítidas e bem definidas. Cada dobra cria um plano que reflete a luz de forma distinta, de modo que o volume é sugerido por sombras suaves entre as facetas, não por sombreamento pintado. As cores aparecem sólidas e uniformes, como papel colorido ou cartolina, reforçando a origem material da técnica. Na versão digital (papercraft), esses mesmos princípios — facetas nítidas, sombras suaves e cor chapada — são recriados para simular o volume tátil do papel dobrado em três dimensões.",
   "geral": {
    "prompt": "A lion made of sharp-creased folded paper, visible folds and layered cutouts, soft cast shadows between layers, matte cream paper with a single warm accent, quiet precision and patience",
-   "gpt": "img/geral-Origami-gpt.png",
-   "gemini": "img/geral-Origami-gemini.jpeg"
+   "gpt": "img/geral-Origami-gpt.webp",
+   "gemini": "img/geral-Origami-gemini.webp",
+   "gpt_original": "originais/geral-Origami-gpt.png",
+   "gemini_original": "originais/geral-Origami-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant papercraft portrait of a young blonde woman crafted from layered paper, holding a detailed paper origami jar filled with folded lilac, red, and yellow paper flowers, soft depth shadows",
-   "gpt": "img/mulhercomflores-Origami-gpt.png",
-   "gemini": "img/mulhercomflores-Origami-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Origami-gpt.webp",
+   "gemini": "img/mulhercomflores-Origami-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Origami-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Origami-gemini.jpeg"
   }
  },
  {
@@ -2606,13 +2965,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "As figuras e cenários são esculpidos em argila de modelar maleável e re-esculpidos manualmente, quadro a quadro, para criar a ilusão de movimento contínuo — um processo extremamente trabalhoso. Armações internas de arame ajudam a sustentar e posicionar os personagens durante a manipulação. A superfície final preserva marcas de dedos e de ferramentas de escultura, com formas levemente irregulares e orgânicas que dão à técnica sua textura tátil e artesanal característica, bem diferente da suavidade da animação 3D digital. Uma iluminação de estúdio suave e direcional realça esse volume e essa textura física da massinha.",
   "geral": {
    "prompt": "A round, goofy clay monster with fingerprints pressed into its surface, visible seam lines, slightly uneven proportions, bright saturated plasticine colors, tabletop miniature set with harsh studio light, warm and funny",
-   "gpt": "img/geral-Claymation-gpt.png",
-   "gemini": "img/geral-Claymation-gemini.jpeg"
+   "gpt": "img/geral-Claymation-gpt.webp",
+   "gemini": "img/geral-Claymation-gemini.webp",
+   "gpt_original": "originais/geral-Claymation-gpt.png",
+   "gemini_original": "originais/geral-Claymation-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant claymation style portrait of a young blonde woman meticulously sculpted from clay, holding a smooth clay jar with beautifully molded lilac, red, and yellow clay flowers, stop-motion studio look",
-   "gpt": "img/mulhercomflores-Claymation-gpt.png",
-   "gemini": "img/mulhercomflores-Claymation-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Claymation-gpt.webp",
+   "gemini": "img/mulhercomflores-Claymation-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Claymation-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Claymation-gemini.jpeg"
   }
  },
  {
@@ -2635,13 +2998,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O vidro era colorido ainda em estado líquido com óxidos metálicos — cobre para verde ou azul-esverdeado, cobalto para azul profundo, ouro para tons de vinho ou violeta. Detalhes como rostos e dobras de tecido eram pintados sobre o vidro com uma mistura de vidro moído, óxido metálico e vinagre, depois fundidos permanentemente em forno. As peças de vidro colorido eram então cortadas, encaixadas e unidas por tiras de chumbo ranhuradas, formando composições segmentadas em painéis geométricos. Diferente da pintura, a cor do vitral depende da luz que o atravessa, não da luz que reflete — por isso muda de intensidade ao longo do dia.",
   "geral": {
    "prompt": "A phoenix rising in a pointed gothic window, vivid ruby, cobalt and amber glass pieces separated by thick dark lead lines, luminous backlighting casting colored glow, flat symbolic forms, sacred radiance",
-   "gpt": "img/geral-Vitral-gpt.png",
-   "gemini": "img/geral-Vitral-gemini.jpeg"
+   "gpt": "img/geral-Vitral-gpt.webp",
+   "gemini": "img/geral-Vitral-gemini.webp",
+   "gpt_original": "originais/geral-Vitral-gpt.png",
+   "gemini_original": "originais/geral-Vitral-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant stained glass window portrait of a young blonde woman holding a jar, vibrant mosaic of translucent lilac, red, and yellow glass pieces bound by thin black lead lines, glowing light source behind",
-   "gpt": "img/mulhercomflores-Vitral-gpt.png",
-   "gemini": "img/mulhercomflores-Vitral-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Vitral-gpt.webp",
+   "gemini": "img/mulhercomflores-Vitral-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Vitral-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Vitral-gemini.jpeg"
   }
  },
  {
@@ -2663,13 +3030,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "A ilustração botânica busca precisão quase científica na anatomia de folhas, pétalas, caules e raízes, muitas vezes mostrando diferentes estágios da planta — botão, flor, semente — numa mesma prancha. Tradicionalmente é construída com aquarela ou guache para a cor, combinados a linhas finas de nanquim para os contornos e um desenho preparatório a grafite para a estrutura. A paleta de cores é naturalista e suave, fiel à aparência real do espécime, e o sujeito é isolado sobre fundo neutro, sem cenário ao redor, para priorizar a clareza documental sobre qualquer efeito atmosférico.",
   "geral": {
    "prompt": "A cluster of mushrooms rendered with fine pen hatching and delicate watercolor wash, Latin labels and plate number, root and cross-section details, aged ivory paper with foxing, patient scientific devotion",
-   "gpt": "img/geral-Ilustração Botânica-gpt.png",
-   "gemini": "img/geral-Ilustração Botânica-gemini.jpeg"
+   "gpt": "img/geral-Ilustração Botânica-gpt.webp",
+   "gemini": "img/geral-Ilustração Botânica-gemini.webp",
+   "gpt_original": "originais/geral-Ilustração Botânica-gpt.png",
+   "gemini_original": "originais/geral-Ilustração Botânica-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant vintage botanical textbook illustration of a young blonde woman profile holding a terracotta jar with scientifically accurate lilac, red, and yellow flowers, fine ink line art, aged paper texture",
-   "gpt": "img/mulhercomflores-Ilustração Botânica-gpt.png",
-   "gemini": "img/mulhercomflores-Ilustração Botânica-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Ilustração Botânica-gpt.webp",
+   "gemini": "img/mulhercomflores-Ilustração Botânica-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Ilustração Botânica-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Ilustração Botânica-gemini.jpeg"
   }
  },
  {
@@ -2691,13 +3062,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os bastões são feitos de pigmento em pó ligado por goma arábica e aplicados secos, diretamente sobre papel texturizado, sem necessidade de preparo prévio. A cor sai de cada bastão já na saturação máxima — diferente da tinta, que se mistura numa paleta —, o que obriga o artista a trabalhar com dezenas ou centenas de bastões de cores distintas. O traço pode ser usado de lado para cobrir áreas amplas, esfumado com os dedos para criar gradações suaves, ou sobreposto em camadas opacas para um efeito quase de empasto. A superfície final fica granulada e ligeiramente pulverulenta, com a textura do papel e os traços direcionais sempre visíveis.",
   "geral": {
    "prompt": "A child's playground in a park drawn with chunky wax crayon, uneven pressure, waxy grain showing white paper through, naive wobbly shapes, saturated primary colors, pure joyful abandon",
-   "gpt": "img/geral-Giz de Cera-gpt.png",
-   "gemini": "img/geral-Giz de Cera-gemini.jpeg"
+   "gpt": "img/geral-Giz de Cera-gpt.webp",
+   "gemini": "img/geral-Giz de Cera-gemini.webp",
+   "gpt_original": "originais/geral-Giz de Cera-gpt.png",
+   "gemini_original": "originais/geral-Giz de Cera-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant soft pastel drawing of a young blonde woman holding a ceramic jar, velvety textures of lilac, red, and yellow flowers, fine grain texture, delicate artistic blending",
-   "gpt": "img/mulhercomflores-Giz de Cera-gpt.png",
-   "gemini": "img/mulhercomflores-Giz de Cera-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Giz de Cera-gpt.webp",
+   "gemini": "img/mulhercomflores-Giz de Cera-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Giz de Cera-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Giz de Cera-gemini.jpeg"
   }
  },
  {
@@ -2719,13 +3094,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O estilo se apoia em contornos pretos grossos e contínuos, que delimitam cada forma e garantem legibilidade mesmo décadas depois, quando a pele envelhece e a tinta se espalha. A paleta é deliberadamente limitada e altamente saturada — tradicionalmente vermelho, verde, amarelo e azul-preto —, escolhida por sua estabilidade sob a pele ao longo dos anos. O preenchimento de cor é chapado e sem gradação, deixando que o contorno e a forma simplificada, não o sombreamento, construam a leitura visual. A iconografia é propositalmente simples e direta — andorinhas, âncoras, rosas, pin-ups, faixas com texto — pensada para permanecer reconhecível à distância mesmo décadas após a aplicação.",
   "geral": {
    "prompt": "A snarling panther head striking forward, heavy black outlines, solid saturated red, green and yellow fills, minimal whip shading, banner scroll, flash sheet on aged paper, bold timeless swagger",
-   "gpt": "img/geral-Tatuagem-gpt.png",
-   "gemini": "img/geral-Tatuagem-gemini.jpeg"
+   "gpt": "img/geral-Tatuagem-gpt.webp",
+   "gemini": "img/geral-Tatuagem-gemini.webp",
+   "gpt_original": "originais/geral-Tatuagem-gpt.png",
+   "gemini_original": "originais/geral-Tatuagem-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant neo-traditional tattoo flash design of a young blonde woman portrait holding a classic jar with vibrant lilac, red, and yellow flowers, clean thick bold lines, smooth gradient shading",
-   "gpt": "img/mulhercomflores-Tatuagem-gpt.png",
-   "gemini": "img/mulhercomflores-Tatuagem-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Tatuagem-gpt.webp",
+   "gemini": "img/mulhercomflores-Tatuagem-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Tatuagem-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Tatuagem-gemini.jpeg"
   }
  },
  {
@@ -2746,13 +3125,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O traço, em branco, creme ou tons pastel, aparece sobre um fundo escuro texturizado que imita uma lousa real, muitas vezes com marcas sutis de poeira e borrão. As linhas são deliberadamente irregulares e um pouco trêmulas, em vez de geometricamente perfeitas, reproduzindo a resistência real do giz arrastado sobre uma superfície áspera. A composição mistura letras decorativas feitas à mão ou tipografia de exibição com pequenos elementos ilustrativos ao redor do texto — faixas, folhas, setas, estrelas. Na prática, o efeito é obtido tanto com giz ou lápis branco sobre superfície escura quanto digitalmente, com tablet gráfico ou traço em lápis preto depois invertido em pós-produção.",
   "geral": {
    "prompt": "A chalk-drawn map of a fantasy island on a dark slate board, powdery strokes, ghost smudges of erased lines, white and pastel chalk, hand-lettered labels, playful teacher-like charm",
-   "gpt": "img/geral-Giz de Lousa-gpt.png",
-   "gemini": "img/geral-Giz de Lousa-gemini.jpeg"
+   "gpt": "img/geral-Giz de Lousa-gpt.webp",
+   "gemini": "img/geral-Giz de Lousa-gemini.webp",
+   "gpt_original": "originais/geral-Giz de Lousa-gpt.png",
+   "gemini_original": "originais/geral-Giz de Lousa-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant chalkboard art depicting a young blonde woman holding a jar filled with beautifully blended lilac, red, and yellow chalk-drawn flowers, authentic powdery chalkboard texture",
-   "gpt": "img/mulhercomflores-Giz de Lousa-gpt.png",
-   "gemini": "img/mulhercomflores-Giz de Lousa-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Giz de Lousa-gpt.webp",
+   "gemini": "img/mulhercomflores-Giz de Lousa-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Giz de Lousa-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Giz de Lousa-gemini.jpeg"
   }
  },
  {
@@ -2775,13 +3158,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "O brutalismo se define por formas massivas, monolíticas e repetitivas, com forte senso de peso e modularidade estrutural. O concreto aparente e sem acabamento é a superfície definidora do estilo, frequentemente preservando as marcas e veios das fôrmas de madeira usadas na moldagem ('board-formed texture'). O princípio central é expor a estrutura e o material com honestidade, em vez de escondê-los atrás de ornamentos ou revestimentos. Uma luz dura, plana e muitas vezes de dia nublado reforça essa frieza e esse peso material — qualidades que, na versão retrato, se traduzem em tratamento anguloso, escultórico e de alto contraste do sujeito, como se esculpido em concreto.",
   "geral": {
    "prompt": "A monolithic raw concrete block monument in a foggy field, board-formed texture, heavy stacked masses, harsh flat overcast light, rain streaks, imposing cold silence",
-   "gpt": "img/geral-Brutalisme-gpt.png",
-   "gemini": "img/geral-Brutalisme-gemini.jpeg"
+   "gpt": "img/geral-Brutalisme-gpt.webp",
+   "gemini": "img/geral-Brutalisme-gemini.webp",
+   "gpt_original": "originais/geral-Brutalisme-gpt.png",
+   "gemini_original": "originais/geral-Brutalisme-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant brutalist artistic portrait of a young blonde woman, high-contrast angular concrete textures, holding a monolithic stone jar with raw, sharply defined lilac, red, and yellow structural flowers",
-   "gpt": "img/mulhercomflores-Brutalisme-gpt.png",
-   "gemini": "img/mulhercomflores-Brutalisme-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Brutalisme-gpt.webp",
+   "gemini": "img/mulhercomflores-Brutalisme-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Brutalisme-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Brutalisme-gemini.jpeg"
   }
  },
  {
@@ -2803,13 +3190,17 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "tecnica": "Os padrões são caleidoscópicos, ondulantes e frequentemente simétricos, construídos a partir de motivos orgânicos e geométricos densamente entrelaçados. As cores são intensamente saturadas e colocadas lado a lado em contrastes simultâneos (como laranja e azul, ou vermelho e verde), criando um efeito de vibração ótica. As letras são deliberadamente distorcidas, derretidas ou entrelaçadas ao ornamento ao redor, a ponto de ficarem difíceis de ler — a composição valoriza o ritmo visual acima da legibilidade. Linhas curvas contínuas, sem ângulos retos, somadas a repetições de inspiração Op Art, sugerem movimento, distorção e profundidade, remetendo aos efeitos visuais associados a experiências alucinógenas.",
   "geral": {
    "prompt": "Kaleidoscopic rippling concentric patterns in clashing acid orange, magenta and electric blue, melting lettering-like shapes, vibrating complementary contrasts, optical distortion, 1967 poster ecstasy",
-   "gpt": "img/geral-Psicodélico-gpt.png",
-   "gemini": "img/geral-Psicodélico-gemini.jpeg"
+   "gpt": "img/geral-Psicodélico-gpt.webp",
+   "gemini": "img/geral-Psicodélico-gemini.webp",
+   "gpt_original": "originais/geral-Psicodélico-gpt.png",
+   "gemini_original": "originais/geral-Psicodélico-gemini.jpeg"
   },
   "mulher": {
    "prompt": "Elegant psychedelic art portrait of a young blonde woman holding a swirling jar, flowers expanding into kaleidoscopic ripples of lilac, ruby red, and chrome yellow, 1960s art nouveau fusion",
-   "gpt": "img/mulhercomflores-Psicodélico-gpt.png",
-   "gemini": "img/mulhercomflores-Psicodélico-gemini.jpeg"
+   "gpt": "img/mulhercomflores-Psicodélico-gpt.webp",
+   "gemini": "img/mulhercomflores-Psicodélico-gemini.webp",
+   "gpt_original": "originais/mulhercomflores-Psicodélico-gpt.png",
+   "gemini_original": "originais/mulhercomflores-Psicodélico-gemini.jpeg"
   }
  },
  {
@@ -2832,12 +3223,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Museum photograph of a pure white Carrara marble sculpture of two lovers in an embrace, wet-drapery folds clinging to idealized anatomy, polished translucent stone with subtle veining, unfinished rough chisel marks at the base, soft raking light, dramatic baroque movement",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, white Carrara marble sculpture bust of a young woman holding a vase of flowers carved in stone, polished translucent surface, subtle veining, wet-drapery folds, soft museum lighting",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2860,12 +3255,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Close-up of a richly embroidered medieval tapestry of a unicorn in a millefleurs garden, thousands of visible stitches in wool and silk thread, raised satin-stitch texture, woven weft of deep red, blue and gold, tiny flowers in dense pattern, aged fabric with soft shadows between threads",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, hand embroidery on linen, portrait stitched in satin stitch and French knots, visible thread texture and raised relief, floral border, vivid silk thread colors, soft shadows between stitches",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  },
  {
@@ -2888,12 +3287,16 @@ const ESTILOS = /*ESTILOS:inicio*/[
   "geral": {
    "prompt": "Glowing neon sign art on a dark brick wall at night, hand-bent glass tubes forming a cursive word and a lightning bolt in hot pink, electric blue and violet, soft bloom halos spilling onto wet asphalt reflections, visible mounting brackets and wires, moody urban nightlife",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   },
   "mulher": {
    "prompt": "Elegant portrait of a young blonde woman holding a vase with lilac, red, and yellow flowers, neon sign art portrait, woman's profile and a vase of flowers drawn as glowing hand-bent glass tubes in hot pink, electric blue and violet, bright halo bloom, dark brick wall, wet reflections",
    "gpt": null,
-   "gemini": null
+   "gemini": null,
+   "gpt_original": null,
+   "gemini_original": null
   }
  }
 ]/*ESTILOS:fim*/;
@@ -2926,7 +3329,7 @@ function celulaImagem(e, grupo, modelo) {
   td.dataset.slot = grupo + '-' + modelo;
   if (!caminho) { td.classList.add('empty'); td.appendChild(el('div', 'ph')); return td; }
   const b = el('button', 'thumb'), cap = `${e.nome} – ${GRUPOS[grupo]} – ${MODELOS[modelo]}`;
-  b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap;
+  b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap; b.dataset.orig = url(e[grupo][modelo + '_original'] || '');
   const im = new Image(); im.loading = 'lazy'; im.src = url(caminho); im.alt = cap;
   b.appendChild(im); td.appendChild(b); return td;
 }
@@ -3017,7 +3420,7 @@ function abrirPainel(e) {
       const caminho = e[g][m];
       if (!caminho) { imgs.appendChild(figuraAusente(MODELOS[m])); return; }
       const fig = el('figure'), b = el('button', 'thumb'), cap = `${e.nome} – ${GRUPOS[g]} – ${MODELOS[m]}`;
-      b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap;
+      b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap; b.dataset.orig = url(e[g][m + '_original'] || '');
       const im = new Image(); im.loading = 'lazy'; im.src = url(caminho); im.alt = cap;
       b.appendChild(im); fig.appendChild(b); fig.appendChild(el('figcaption', null, MODELOS[m])); imgs.appendChild(fig);
     });
@@ -3030,7 +3433,9 @@ document.addEventListener('click', ev => {
   const t = ev.target;
   const nome = t.closest('tbody th.name'); if (nome) { abrirPainel(ESTILOS[nome.parentNode.dataset.i]); return; }
   if (t.closest('.sp-close, .sp-back')) { sp.close(); return; }
-  const th = t.closest('.thumb'); if (th) { dlg.querySelector('img').src = th.dataset.full; dlg.querySelector('p').textContent = th.dataset.cap; dlg.showModal(); return; }
+  const th = t.closest('.thumb'); if (th) { dlg.querySelector('img').src = th.dataset.full; dlg.querySelector('p').textContent = th.dataset.cap;
+    const dl = dlg.querySelector('.dl'); dl.hidden = !th.dataset.orig; dl.href = th.dataset.orig;
+    dl.setAttribute('download', decodeURIComponent(th.dataset.orig.split('/').pop())); dlg.showModal(); return; }
   const c = t.closest('.copy');
   if (c) { navigator.clipboard.writeText(c.dataset.t).then(() => { c.textContent = 'Copiado'; setTimeout(() => c.textContent = 'Copiar', 1200); }); return; }
   if (t === dlg) dlg.close();

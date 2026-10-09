@@ -14,7 +14,8 @@ Guia com 100 estilos artísticos populares em prompts de IA generativa (Midjourn
 | `estilos-artisticos-geracao-imagens.md` | Guia em Markdown, com as tabelas de estilos e prompts. |
 | `estilos-artisticos-geracao-imagens.html` | Versão em HTML com as imagens de exemplo incorporadas às tabelas. |
 | `atualizar-imagens.py` | Script que atualiza as colunas de imagem do HTML a partir da pasta `img/`. |
-| `img/` | Imagens geradas pelos modelos (Gemini e GPT) para cada estilo. |
+| `originais/` | Imagens no tamanho e formato originais fornecidos pelos modelos (Gemini e GPT). |
+| `img/` | Versões WebP (qualidade 95) geradas pelo script a partir de `originais/`; são as usadas na página. |
 
 ## Categorias de estilos (100 estilos)
 
@@ -35,7 +36,7 @@ Cada objeto tem: `nome`, `secao`, `stems` (nomes usados nos arquivos de imagem),
 
 ## Atualizando as imagens
 
-Coloque as novas imagens em `img/` seguindo o padrão de nomes (extensões `jpeg`, `jpg`, `png` ou `webp`; maiúsculas e minúsculas são ignoradas):
+Coloque as novas imagens em `originais/` seguindo o padrão de nomes (extensões `jpeg`, `jpg`, `png` ou `webp`; maiúsculas e minúsculas são ignoradas):
 
 ```
 geral-<Estilo>-gpt.png               geral-<Estilo>-gemini.jpeg
