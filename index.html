@@ -131,6 +131,8 @@ tr.hide{display:none}
 .lb img{display:block;max-width:100%;max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);object-fit:contain;border-radius:var(--rs);box-shadow:0 18px 60px rgba(0,0,0,.6);transition:opacity .15s}
 .lb img.troca{opacity:.25}
 .lb figcaption{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;font-size:13.5px;color:#d9d9e0}
+.lb .cap-nome{all:unset;box-sizing:border-box;cursor:pointer;color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.lb .cap-nome:hover,.lb .cap-nome:focus-visible{color:var(--acc)}
 .lb .pos{padding:2px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-variant-numeric:tabular-nums;font-size:12.5px}
 .lb .dl{color:#fff;text-decoration:none;font-size:12.5px;padding:3px 12px;border:1px solid rgba(255,255,255,.4);border-radius:999px}
 .lb .dl:hover,.lb .dl:focus-visible{background:#fff;color:#000}
@@ -250,7 +252,7 @@ dialog.panel::backdrop{background:rgba(0,0,0,.7)}
 </header>
 <main id="wrap"><table id="tbl"></table><p id="vazio" hidden></p></main>
 </div>
-<dialog id="dlg"><div class="lb"><figure><img alt=""><figcaption><span class="cap"></span><span class="pos"></span><a class="dl" download></a></figcaption></figure></div><button class="lb-btn prev" type="button"></button><button class="lb-btn next" type="button"></button><button class="lb-btn x" type="button"></button></dialog>
+<dialog id="dlg"><div class="lb"><figure><img alt=""><figcaption><span class="cap"><button class="cap-nome" type="button"></button><span class="cap-resto"></span></span><span class="pos"></span><a class="dl" download></a></figcaption></figure></div><button class="lb-btn prev" type="button"></button><button class="lb-btn next" type="button"></button><button class="lb-btn x" type="button"></button></dialog>
 <dialog id="sp" class="panel"><button class="sp-close" type="button">✕</button><div class="sp-body"><div class="sp-left" id="spLeft"></div><div class="sp-right" id="spRight"></div></div></dialog>
 <script>
 /* Dados: edite o texto aqui. As imagens são atualizadas por atualizar-imagens.py (não altere os marcadores). */
@@ -3696,7 +3698,7 @@ function celulaImagem(e, L, grupo, modelo) {
   const td = el('td', 'img'), caminho = e[grupo][modelo];
   if (!caminho) { td.classList.add('empty'); td.appendChild(el('div', 'ph')); return td; }
   const b = el('button', 'thumb'), cap = `${L.nome} – ${t().grupo[grupo]} – ${MODELOS[modelo]}`;
-  b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap; b.dataset.m = MODELOS[modelo]; b.dataset.orig = url(e[grupo][modelo + '_original'] || '');
+  b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap; b.dataset.i = ESTILOS.indexOf(e); b.dataset.nome = L.nome; b.dataset.m = MODELOS[modelo]; b.dataset.orig = url(e[grupo][modelo + '_original'] || '');
   b.setAttribute('aria-label', cap);
   const im = new Image(); im.loading = 'lazy'; im.src = url(caminho); im.alt = cap;
   b.appendChild(im); td.appendChild(b); return td;
@@ -3810,7 +3812,7 @@ function abrirPainel(e) {
       const caminho = e[g][m];
       if (!caminho) { imgs.appendChild(figuraAusente(MODELOS[m])); return; }
       const fig = el('figure'), b = el('button', 'thumb'), cap = `${L.nome} – ${t().grupo[g]} – ${MODELOS[m]}`;
-      b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap; b.dataset.m = MODELOS[m]; b.dataset.orig = url(e[g][m + '_original'] || '');
+      b.type = 'button'; b.dataset.full = url(caminho); b.dataset.cap = cap; b.dataset.i = ESTILOS.indexOf(e); b.dataset.nome = L.nome; b.dataset.m = MODELOS[m]; b.dataset.orig = url(e[g][m + '_original'] || '');
       b.setAttribute('aria-label', cap);
       const im = new Image(); im.loading = 'lazy'; im.src = url(caminho); im.alt = cap;
       b.appendChild(im); fig.appendChild(b); fig.appendChild(el('figcaption', null, MODELOS[m])); imgs.appendChild(fig);
@@ -3821,7 +3823,7 @@ function abrirPainel(e) {
 }
 
 /* ---------- Visualizador (setas, botões e deslize) ---------- */
-const lbImg = dlg.querySelector('img'), lbCap = dlg.querySelector('.cap'), lbPos = dlg.querySelector('.pos'), lbDl = dlg.querySelector('.dl');
+const lbImg = dlg.querySelector('img'), lbNome = dlg.querySelector('.cap-nome'), lbResto = dlg.querySelector('.cap-resto'), lbPos = dlg.querySelector('.pos'), lbDl = dlg.querySelector('.dl');
 const lbPrev = dlg.querySelector('.prev'), lbNext = dlg.querySelector('.next'), lbX = dlg.querySelector('.x');
 let gal = [], gi = 0;
 function abrirGaleria(btn) {
@@ -3835,7 +3837,7 @@ function mostrarImagem(anima = true) {
   if (anima) { lbImg.classList.add('troca'); }
   lbImg.onload = () => lbImg.classList.remove('troca');
   lbImg.src = b.dataset.full; lbImg.alt = b.dataset.cap;
-  lbCap.textContent = b.dataset.cap; lbPos.textContent = `${gi + 1} / ${gal.length}`;
+  lbNome.textContent = b.dataset.nome; lbResto.textContent = b.dataset.cap.slice(b.dataset.nome.length); lbPos.textContent = `${gi + 1} / ${gal.length}`;
   lbDl.hidden = !b.dataset.orig; lbDl.href = b.dataset.orig; lbDl.textContent = t().baixar;
   lbDl.setAttribute('download', decodeURIComponent((b.dataset.orig || '').split('/').pop()));
   lbPrev.hidden = lbNext.hidden = gal.length < 2;
@@ -3845,6 +3847,7 @@ function passo(d) { if (gal.length < 2) return; gi = (gi + d + gal.length) % gal
 lbPrev.addEventListener('click', () => passo(-1));
 lbNext.addEventListener('click', () => passo(1));
 lbX.addEventListener('click', () => dlg.close());
+lbNome.addEventListener('click', () => { const b = gal[gi]; if (!b) return; dlg.close(); abrirPainel(ESTILOS[b.dataset.i]); });
 let x0 = null;
 dlg.addEventListener('pointerdown', ev => { if (ev.pointerType === 'touch' || ev.pointerType === 'pen') x0 = ev.clientX; });
 dlg.addEventListener('pointerup', ev => { if (x0 == null) return; const dx = ev.clientX - x0; x0 = null; if (Math.abs(dx) > 50) passo(dx < 0 ? 1 : -1); });
